@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*Configuration & Helpers*/
+@import "abstracts/_variables.css";
+
+/*Vendors*/
+@import "vendors/_bootstrap.css";
+
+/*Base stuff*/
+@import "base/_base.css";
+@import "base/_fonts.css";
+@import "base/_typography.css";
+
+/*Layout-related sections*/
+@import "layout/_footer.css";
+@import "layout/_header.css";
+
+
+/*Components*/
+@import "components/_button.css";
+
+/*Page-specific styles*/
+@import "pages/_home.css";
+
+/*Themes*/
+@import "themes/_default.css";
