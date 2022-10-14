@@ -1,0 +1,29 @@
+.section-title{
+    font-size: var(--fs-md);
+}
+
+.text-black{color: var(--clr-d-gray);}
+
+.title-mdl{
+    color: var(--clr-d-gray);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-med);
+}
+
+.text-xsm{
+    color: var(--clr-d-gray);
+    font-size: var(--fs-xsm);
+}
+
+.card-text-title{
+    font-weight: var(--fw-med);
+    font-size: var(--fs-mdl);
+    color: var(--clr-d-gray);
+    font-style: italic;
+}
+
+.card-text{
+    font-weight: var(--fw-reg);
+    padding: var(--spacer-sm);
+    padding-left: var(--spacer-md);
+}

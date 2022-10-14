@@ -1,0 +1,49 @@
+.division-top{
+    border-top: .10rem solid var(--clr-d-gray);
+    padding: var(--spacer-smd);   
+}
+
+.division-bottom{
+    border-bottom: .10rem solid var(--clr-d-gray); 
+    padding: var(--spacer-smd);  
+}
+
+.btn-curve-yellow{
+    background: var(--clr-yellow);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 100%;
+    border:none;
+}
+
+.btn-curve-yellow:hover{
+    background: var(--clr-d-gray);
+}
+
+.btn-curve-gray{
+    background-color: var(--clr-white);
+}
+
+.btn-curve-gray:hover{
+    background: var(--clr-yellow);
+}
+
+.arrow-icon{
+    transform: scale(1);
+}
+
+.arrow-icon:hover{
+    transform: scale(1.5);
+}
+
+
+
+.btn-icon{
+    margin-right: 4px;
+    margin-top: 4px;
+    padding: 4px;
+}
+
+.no-border{
+    border: none;
+}
