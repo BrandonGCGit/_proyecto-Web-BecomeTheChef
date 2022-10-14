@@ -19,6 +19,7 @@
 /*Components*/
 @import "components/_button.css";
 @import "components/components.css";
+@import "components/_search-Box.css";
 
 /*Page-specific styles*/
 @import "pages/_home.css";
