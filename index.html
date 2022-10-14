@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/932c8d254a.js" crossorigin="anonymous"></script>
 
     <!--    FONTS NATO SERIF & LATO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--    CSS-->
     <link rel="stylesheet" href="main.css">
 </head>
@@ -99,27 +101,55 @@
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
 
+    </header>
+
+    <section class="container-sm">
+
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
         <!--=====================================-->
         <div class="container-xxl">
             <div class="row d-flex text-center m-auto">
-                <div class="col-1 bg-secondary m-auto">
-                    <img src="./img/Arrow%201.png" alt="">
-                </div>
-                <div class="col-10 bg-primary m-auto">
+                <div class="col-xxl m-auto">
                     <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 10 Recetas de la semana</h3>
-                </div>
-                <div class="col-1 bg-secondary m-auto">
-                    <img class="rotate-180" src="./img/Arrow%201.png" alt="">
                 </div>
             </div>
         </div>
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
         <!--=====================================-->
-    </header>
-</main>
 
+        <!--===============================================-->
+        <!--CARROUSEL-->
+        <!--===============================================-->
+        <section class="container-sm bg-primary">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 10 Recetas de la semana</h3>
+                </div>
+                <div class="col-6 text-sm-end">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===============================================-->
+        <!--CARROUSEL-->
+        <!--===============================================-->
+    </section>
+</main>
 </body>
 </html>
