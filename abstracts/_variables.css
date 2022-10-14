@@ -1,3 +1,5 @@
 :root{
-
+    /*COLORS*/
+    --bg-orange: hsl(35, 84%, 50%);
+    --bg-white: hsl(0, 0%, 100%);
 }

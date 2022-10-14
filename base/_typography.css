@@ -1,0 +1,9 @@
+@import "_fonts.css";
+
+.ff-lato{
+    font-family: var(--ff-Lato);
+}
+
+.ff-NotoSerif{
+    font-family: var(--ff-NotoSerif);
+}

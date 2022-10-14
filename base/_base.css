@@ -1,3 +1,14 @@
+@import "../abstracts/_variables.css";
+/*COLORS*/
+.bg-orange{
+    color: var(--bg-orange);
+}
+
+
 .br-0{
     border-radius: 0;
+}
+
+.rotate-180{
+    rotate: 180deg;
 }

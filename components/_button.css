@@ -1,0 +1,7 @@
+@import "../abstracts/_variables.css";
+
+.bt-orange{
+    background-color: var(--bg-orange);
+    color: var(--bg-white);
+    border: none;
+}
