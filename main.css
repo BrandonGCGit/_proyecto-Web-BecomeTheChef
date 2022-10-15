@@ -20,9 +20,11 @@
 @import "components/_button.css";
 @import "components/components.css";
 @import "components/_search-Box.css";
+@import "components/_carousel.css";
 
 /*Page-specific styles*/
 @import "pages/_home.css";
+@import "pages/_index.css";
 
 /*Themes*/
 @import "themes/_default.css";

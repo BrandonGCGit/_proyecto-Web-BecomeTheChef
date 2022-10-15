@@ -26,7 +26,7 @@
         <!--==========================================-->
         <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
             <div class="container">
-                <a class="navbar-brand " href="#"><img src="./img/LOGO%20NEGRO.png" alt="Brand Become The Chef"></a>
+                <a class="navbar-brand " href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,7 +76,7 @@
         <div class="container-sm ">
             <div class="row row-cols-1">
                 <div class="col-sm">
-                    <img class="img-fluid" src="./img/two-tortillas%201.png" alt="">
+                    <img class="img-fluid" src="./img/burritos.png" alt="">
                 </div>
             </div>
         </div>
@@ -105,12 +105,28 @@
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
         <!--=====================================-->
-        <div class="container-xxl">
+        <div class="container-sm">
             <div class="row d-flex text-center m-auto">
-                <div class="col-xxl m-auto">
+
+                <div class="col-sm-6 m-auto">
                     <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 12 Recetas de la semana</h3>
                 </div>
+
             </div>
+           <div class="container-sm">
+               <divc class="row d-flex m-auto">
+                <div class="col-6 rp-carousel text-start">
+                    <a class="btn mb-3 mr-1" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                        <i class="fa fa-arrow-left fs-2"></i>
+                    </a>
+                </div>
+                <div class="col-6 rp-carousel text-end">
+                    <a class="btn mb-3 " href="#carouselExampleControls" role="button" data-bs-slide="next">
+                        <i class="fa fa-arrow-right fs-2"></i>
+                    </a>
+                </div>
+            </divc>
+           </div>
         </div>
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
@@ -122,80 +138,42 @@
         <section class="container-sm my-sm-5">
             <div class="row">
                 <div class="col-12">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="d-flex">
-                                    <div class="row row-cols-1 row-cols-md-4 g-md-4">
-                                        <div class="col">
-                                            <div class="card h-100">
-                                                <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
-                                                <div class="card-body ">
-                                                    <h5 class="card-title">Card title</h5>
-                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100">
-                                                <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card title</h5>
-                                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100">
-                                                <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card title</h5>
-                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100">
-                                                <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card title</h5>
-                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div class="carousel-item">
+                    <div id="carouselExampleControls" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
                                 <div class="row row-cols-1 row-cols-md-4 g-md-4">
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                                             <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                                <!--**********************************************-->
+                                                <div class="d-flex">
+                                                    <h5 class="card-text-title card-title w-100">Pancakes</h5>
+                                                    <a class="btn-curve-yellow btn btn-primary" href="#" role="button"><i class="btn-icon fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                                <!--**********************************************-->
+                                                <div class="d-flex justify-content-start">
+                                                    <i class="fa-solid fa-clock align-self-center"></i>
+                                                    <p class="card-text align-self-center card-text">15 Min</p>
+                                                </div>
+                                                <!--**********************************************-->
+                                                <div class="d-flex justify-content-start">
+                                                    <i class="fa-solid fa-utensils align-self-center"></i>
+                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
+                                                </div>
+                                                <!--**********************************************-->
+                                                <div class="d-flex justify-content-start">
+                                                    <i class="fa-solid fa-signal align-self-center"></i>
+                                                    <p class="card-text align-self-center card-text">Fácil</p>
+                                                </div>
+                                                <!--**********************************************-->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-3 d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -205,9 +183,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-3 d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -217,9 +195,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-3 d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -233,9 +211,9 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row row-cols-1 row-cols-md-4 g-md-4">
-                                    <div class="col">
+                                    <div class="col-md-3">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -245,9 +223,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -257,9 +235,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -269,9 +247,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col d-none d-md-block">
                                         <div class="card h-100">
-                                            <img src="./img/Mask%20group.png" class="card-img-top" alt="...">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -283,14 +261,59 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <div class="carousel-item">
+                                <div class="row row-cols-1 row-cols-md-4 g-md-4">
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-none d-md-block">
+                                        <div class="card h-100">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-none d-md-block">
+                                        <div class="card h-100">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-none d-md-block">
+                                        <div class="card h-100">
+                                            <img src="./img/pancake.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -328,7 +351,7 @@
                 <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                 <section class="row division-bottom">
                     <div class="col">
-                        <div class="card no-border">
+                        <div class="card">
                             <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             <div class="card-body">
                                 <!--**********************************************-->
@@ -358,7 +381,7 @@
                     </div>
                     <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                     <div class="col">
-                        <div class="card no-border">
+                        <div class="card">
                             <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             <div class="card-body">
                                 <!--**********************************************-->
@@ -388,7 +411,7 @@
                     </div>
                     <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                     <div class="col">
-                        <div class="card no-border">
+                        <div class="card">
                             <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             <div class="card-body">
                                 <!--**********************************************-->

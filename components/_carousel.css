@@ -1,0 +1,9 @@
+.carousel-control-prev,
+.carousel-control-next{
+    width: 6vh;
+    height: 6vh;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
