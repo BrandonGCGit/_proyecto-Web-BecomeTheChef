@@ -1,0 +1,18 @@
+@import "../abstracts/_variables.css";
+
+.card-optionsDefault{
+    width: 100%;
+    height: 100px;
+    background-color: var(--clr-a-gray);
+}
+
+
+
+
+.card-ciruculeDefault{
+    height: 60px;
+    width: 60px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}

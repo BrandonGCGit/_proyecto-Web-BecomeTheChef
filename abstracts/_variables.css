@@ -25,11 +25,12 @@
     --fs-lg: 4rem;
     --fs-xlg: 5rem;
 /*colors*/
-    /* --clr-white: hsl(0,0%,100%);
-    --clr-black: hsl(0,100%,0%);*/
+/*    --clr-white: hsl(0,0%,100%);*/
+    --clr-black: hsl(0,100%,0%);
     --clr-yellow: #EA9215;
     --clr-white: #ffff;
     --clr-d-gray: #2D3338;
+    --clr-a-gray: hsl(0, 0%, 85%);
 
 /*text-style*/
     --italic:'italic';

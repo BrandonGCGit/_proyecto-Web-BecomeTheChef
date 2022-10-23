@@ -21,6 +21,7 @@
 @import "components/components.css";
 @import "components/_search-Box.css";
 @import "components/_carousel.css";
+@import "components/_card-options-Default.css";
 
 /*Page-specific styles*/
 @import "pages/_home.css";
