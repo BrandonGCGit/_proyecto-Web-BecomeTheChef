@@ -12,3 +12,12 @@
 .rotate-180{
     rotate: 180deg;
 }
+
+@media (max-width: 575.98px) {
+
+    .line-img{justify-content: center;}
+}
+
+@media (max-width: 1480px) {
+.icon-line-height{line-height: 1.5rem;}
+}

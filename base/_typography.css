@@ -17,6 +17,16 @@
     font-size: var(--fs-xsm);
 }
 
+.text-md-yellow{
+    color: var(--clr-yellow);
+    font-size: var(--fs-md);
+}
+
+.text-md-gray{
+    color: var(--clr-d-gray);
+    font-size: var(--fs-md);
+}
+
 .card-text-title{
     font-weight: var(--fw-med);
     font-size: var(--fs-mdl);
@@ -24,10 +34,53 @@
     font-style: italic;
 }
 
-.card-text{
-        font-weight: var(--fw-reg);
+
+.recipe-title{
+    font-weight: var(--fw-med);
+    font-size: var(--fs-mdxl);
+    color: var(--clr-d-gray);
+    font-style: italic;
+}
+
+.body-recipe-text{
+    font-size: var(--fs-xsm);
+    color: var(--clr-d-gray);
+    font-style: normal;
+}
+
+.ingredients-text{
+    font-size: var(--fs-sm);
+    color: var(--clr-d-gray);
+    margin-right: var(--spacer-xsm);
+    font-style: normal;
+}
+
+.text-ing{
+    font-size: var(--fs-sm);
+    color: var(--clr-d-gray);
+    font-weight: var(--fw-med);
+    padding-left: 0.5rem;
+}
+
+
+.data-text-rg{
+    font-size: var(--fs-rg);
     padding: var(--spacer-sm);
     padding-left: var(--spacer-md);
+}
+.data-txt-rg{
+    font-size: var(--fs-rg);
+    padding: var(--spacer-sm);
+}
+
+.data-icon-rg{
+    font-size: var(--fs-rg);
+    margin-right: 1rem;
+}
+
+.text-rg-gray{
+    color: var(--clr-d-gray);
+    font-size: var(--fs-rg);
 }
 
 .ff-lato{
@@ -36,4 +89,8 @@
 
 .ff-NotoSerif{
     font-family: var(--ff-NotoSerif);
+}
+
+.collapse-bt{
+    color: blueviolet;
 }

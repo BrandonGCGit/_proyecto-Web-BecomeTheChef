@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .division-top{
     border-top: .10rem solid var(--clr-d-gray);
     padding: var(--spacer-smd);   
@@ -36,7 +41,11 @@
     transform: scale(1.5);
 }
 
-
+#accordion-header-yellow{
+    border-color: var(--clr-yellow);
+    background: var(--clr-yellow);
+    box-shadow: none;
+}
 
 .btn-icon{
     margin-right: 4px;
@@ -46,4 +55,28 @@
 
 .no-border{
     border: none;
+}
+
+.only-a-border{
+    border-left: none;
+    border-right:none;
+    border-top: none;
+}
+
+.no-decorations-link{
+    list-style: none;
+}
+
+.icon-line-height{
+    line-height: 1.5rem;
+}
+
+
+.align-card-body{
+    margin-top: 0rem;
+    padding-top: 0rem;
+    padding-left: 1.50rem; 
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
 }
