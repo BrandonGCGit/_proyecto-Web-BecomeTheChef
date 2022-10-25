@@ -1,0 +1,10 @@
+@import "../abstracts/_variables.css";
+
+.w350{
+    width: 100%;
+    height: 350px;
+}
+
+.clr-black{
+    background-color: var(--clr-black);
+}

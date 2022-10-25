@@ -21,10 +21,12 @@
 @import "components/components.css";
 @import "components/_search-Box.css";
 @import "components/_carousel.css";
+@import "components/_card-options-Default.css";
 
 /*Page-specific styles*/
 @import "pages/_home.css";
 @import "pages/_index.css";
+@import "pages/_login.css";
 
 /*Themes*/
 @import "themes/_default.css";
