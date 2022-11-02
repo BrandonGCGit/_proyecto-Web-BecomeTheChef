@@ -39,7 +39,7 @@
           <!--                  ==============================================================================================================-->
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-4 pt-xl-0 mt-xl-n5 justify-content-center">
             
-            <form>
+            <form action="./php/insert.php" method="post">
               
               <!--                                                    ========================-->
               <!--                                                    Nombre & SegundoNombre-->
@@ -48,13 +48,13 @@
                 <div class="col-md-6">
                   <div class="mb-2">
                     <label for="register_name" class="form-label">Nombre</label>
-                    <input type="email" class="form-control" id="register_name" placeholder="Nombre">
+                    <input type="text" class="form-control" id="register_name" placeholder="Nombre" name="register_name">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="mb-2">
-                    <label for="register_segundoNombre" class="form-label">Segundo Nombre</label>
-                    <input type="email" class="form-control" id="register_segundoNombre" placeholder="Segundo Nombre">
+                    <label for="register_secondName" class="form-label">Segundo Nombre</label>
+                    <input type="text" class="form-control" id="register_secondName" placeholder="Segundo Nombre" name="register_secondName">
                   </div>
                 </div>
               </div>
@@ -66,12 +66,12 @@
               <!--                                                    PrimerApellido & SegundoApellido-->
               <!--                                                    =======================================-->
               <div class="mb-2">
-                <label for="register_primerApellido" class="form-label">Primer Apellido</label>
-                <input type="email" class="form-control" id="register_primerApellido" placeholder="Primer apellido">
+                <label for="register_lastName" class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="register_lastName" placeholder="Primer apellido" name="register_lastName">
               </div>
               <div class="mb-2">
-                <label for="register_segundoApellido" class="form-label">Segundo Apellido</label>
-                <input type="email" class="form-control" id="register_segundoApellido" placeholder="Segundo apellido">
+                <label for="register_secondSurname" class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="register_secondSurname" placeholder="Segundo apellido" name="register_secondSurname">
               </div>
               
               <!--                                                    =======================================-->
@@ -82,20 +82,20 @@
               <!--                                                    Email & Contraseña & ConfirmarContrasena & BtnRegistrarse-->
               <!--                                                    ========================================-->
               <div class="mb-2">
-                <label for="register_correoElectronico" class="form-label">Correo Electronico</label>
-                <input type="email" class="form-control" id="register_correoElectronico" placeholder="name@example.com">
+                <label for="register_email" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" id="register_email" placeholder="name@example.com" name="register_email">
               </div>
               <div class="mb-2">
-                <label for="register_contrasena" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="register_contrasena" placeholder="Contraseña">
+                <label for="register_password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="register_password" placeholder="Contraseña" name="register_password">
               </div>
               <div class="mb-2">
-                <label for="register_confirmarConstrasena" class="form-label">Confirmar Cotraseña</label>
-                <input type="password" class="form-control" id="register_confirmarConstrasena" placeholder="Contraseña">
+                <label for="register_passwordConfirmation" class="form-label">Confirmar Cotraseña</label>
+                <input type="password" class="form-control" id="register_passwordConfirmation" placeholder="Contraseña" name="register_passwordConfirmation">
               </div>
               
               <div class="pt-1 mb-3">
-                <button class="btn btn-dark btn-lg btn-block bt-orange" type="button">Registrarse</button>
+                <button class="btn btn-dark btn-lg btn-block bt-orange" type="submit" value="SUBMIT">Registrarse</button>
               </div>
               <!--                                                    ========================================-->
               <!--                                                    Email & Contraseña & ConfirmarContrasena & BtnRegistrarse-->

@@ -7,11 +7,10 @@ if(!isset($database)){
         // [required]
         'type' => 'mysql',
         'host' => 'localhost',
-        'database' => 'becomeTheChef',
+        'database' => 'become_the_chef',
         'username' => 'root',
         'password' => 'Sp^9EfrVA!Z'
     ]);
 }
-$database->queryString
 
 ?>
