@@ -1,6 +1,4 @@
 <?php
-
-
 ?>
 
 <!doctype html>
@@ -14,7 +12,7 @@
 </head>
 <body>
 
+<h2>HOLA DEPLY</h2>
 
-<h1>HOLA DIPLOY</h1>
 </body>
 </html>
