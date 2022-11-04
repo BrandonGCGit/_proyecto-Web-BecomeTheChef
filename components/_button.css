@@ -5,3 +5,26 @@
     color: var(--bg-white);
     border: none;
 }
+
+.btn-close-constume{
+    width: var(--fs-mdxl);
+    height: var(--fs-mdxl);
+    background-color: var(--clr-yellow);
+    border-radius: 100%;
+    border: none;
+ }
+
+ .btn-bottom-constume{
+    background-color: var(--clr-yellow);
+    border: none;
+ }
+
+ .btn-close-constume:hover{
+    background-color: var(--clr-yellow);
+    opacity: 50%;
+ }
+
+ .btn-bottom-constume:hover{
+    background-color: var(--clr-yellow);
+    opacity: 50%;
+ }

@@ -48,11 +48,22 @@ body{
 }
 
 .btn-icon{
-    margin-right: 4px;
-    margin-top: 4px;
-    padding: 4px;
+    /*margin-right: 3px;
+    margin-top: 3px;
+    padding: 3px;*/
+    width: var(--fs-md);
+    height: var(--fs-md);
+    border: none;
 }
 
+.buttons-order{
+    display: flex;
+}
+
+.bg-gray{
+    background-color: var(--clr-a-gray);
+    border-color: var(--clr-d-gray);
+}
 .no-border{
     border: none;
 }
@@ -71,7 +82,9 @@ body{
     line-height: 1.5rem;
 }
 
-
+.prueba{
+    background: red;
+}
 .align-card-body{
     margin-top: 0rem;
     padding-top: 0rem;

@@ -91,6 +91,15 @@
     font-family: var(--ff-NotoSerif);
 }
 
-.collapse-bt{
-    color: blueviolet;
+.btn-icon{
+    color: var(--clr-white);
+    font-size: var(--fs-mdl);
+}
+
+.xlg-title{
+    font-size: var(--fs-xlg);
+}
+
+.mdl-title{
+    font-size: var(--fs-mdl);
 }
