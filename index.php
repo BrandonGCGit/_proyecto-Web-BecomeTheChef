@@ -40,7 +40,7 @@
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item mx-xl-3">
                             <a class="nav-link" aria-current="page" href="#">Sobre Nosotros</a>
