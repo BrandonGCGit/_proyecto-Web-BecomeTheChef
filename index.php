@@ -14,6 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!--    FLICKITY-SLIDER -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <!--    CSS-->
     <link rel="stylesheet" href="main.css">
 </head>
@@ -71,12 +75,12 @@
         <!--==============================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--==============================-->
-        
+
         <!--==========================================-->
         <!--NAVBAR-->
         <!--==========================================-->
-        
-        
+
+
         <!--===============================-->
         <!--IMG TACOS HEADER-->
         <!--===============================-->
@@ -90,7 +94,7 @@
         <!--===============================-->
         <!--IMG TACOS HEADER-->
         <!--===============================-->
-        
+
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
@@ -104,381 +108,370 @@
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
-    
+
     </header>
     <!--    =======================-->
     <!--    NAVBAR & IMG TACO-->
     <!--    ======================-->
-    
-    
+
+
     <!--    ========================================-->
     <!--    LasMejores12RecetasDeLaSemana & CAROUSEL-->
     <!--    =======================================-->
     <section class="container-sm">
-        
+
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
         <!--=====================================-->
-        <div class="container-sm">
-            <div class="row d-flex text-center m-auto">
-                
-                <div class="col-sm-6 m-auto">
-                    <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 12 Recetas de la semana</h3>
+                <div class="container-sm">
+                    <div class="row d-flex text-center m-auto">
+
+                        <div class="col-sm-6 m-auto">
+                            <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 12 Recetas de la semana</h3>
+                        </div>
+
+                    </div>
                 </div>
-            
-            </div>
-            <div class="container-sm">
-                <divc class="row d-flex m-auto">
-                    <div class="col-6 rp-carousel text-start">
-                        <a class="btn mb-3 mr-1" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <i class="fa fa-arrow-left fs-2"></i>
-                        </a>
-                    </div>
-                    <div class="col-6 rp-carousel text-end">
-                        <a class="btn mb-3 " href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <i class="fa fa-arrow-right fs-2"></i>
-                        </a>
-                    </div>
-                </divc>
-            </div>
-        </div>
         <!--=====================================-->
         <!--LAS MEJORES 10 RECETAS DE LA SEMANA-->
         <!--=====================================-->
-        
+
         <!--===============================================-->
         <!--CARROUSEL-->
         <!--===============================================-->
-        <section class="container-sm">
-            <div class="row">
-                <div class="col-12">
-                    
-                    <div id="carouselExampleControls" class="carousel slide carousel-multi-item" data-bs-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="row row-cols-1 row-cols-md-3 g-md-3">
-                                    <div class="col-md">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row row-cols-1 row-cols-md-3 g-md-3">
-                                    <div class="col-md">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row row-cols-1 row-cols-md-3 g-md-3">
-                                    <div class="col-md">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md d-none d-md-block">
-                                        <div class="card">
-                                            <a href="#">
-                                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                                            </a>
-                                            <div class="card-body">
-                                                <!--**********************************************-->
-                                                <div class="d-flex">
-                                                    <a class="text-decoration-none" href="#">
-                                                        <h5 class=" card-text-title">Pancakes</h5>
-                                                    </a>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">15 Min</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">20 Porciones</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="d-flex justify-content-start">
-                                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                                    <p class="card-text align-self-center card-text">Fácil</p>
-                                                </div>
-                                                <!--**********************************************-->
-                                                <div class="text-end">
-                                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
+        <!-- Swiper -->
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center me-3"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center me-3"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center me-3"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell mx-2">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class=" card-text-title">pancakes</h5>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text">fácil</p>
+                        </div>
+                        <div class="text-end">
+
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--===============================================-->
         <!--CARROUSEL-->
         <!--===============================================-->
@@ -486,13 +479,13 @@
     <!--    ========================================-->
     <!--    LasMejores12RecetasDeLaSemana & CAROUSEL-->
     <!--    =======================================-->
-    
-    
-    
+
+
+
     <!--   =============================================== -->
     <!--    Our Selection for your week-->
     <!--   ===============================================-->
-    
+
     <div class="container">
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
@@ -522,7 +515,7 @@
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
     </div>
-    
+
     <!--    ==================================================-->
     <!--    filters & search & acordeon & listofrecipes-->
     <!--    =================================================-->
@@ -635,9 +628,9 @@
             <!--            =======================-->
             <!--            FILTER & ACCORDION-->
             <!--            =======================-->
-            
-            
-            
+
+
+
             <!--            ======================-->
             <!--            ListOfRecipes-->
             <!--            =========================-->
@@ -773,17 +766,17 @@
     <!--    ==================================================-->
     <!--    filters & search & acordeon & listofrecipes-->
     <!--    =================================================-->
-    
-    
+
+
     <!--   =============================================== -->
     <!--    Our Selection for your week-->
     <!--   ===============================================-->
-    
-    
+
+
     <!--    =================================================-->
     <!--    FOOTER-->
     <!--    =================================================-->
-    
+
     <div class="container clr-black h-75">
         <div class="row row-cols-md-4">
             <div class="col-md-3 border-end border-2 mt-5 text-center border-opacity-25">
@@ -797,7 +790,7 @@
                     <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> About Us</a>
                 </div>
             </div>
-            
+
             <div class="col-md-3 border-end border-2 mt-5 text-center">
                 <div class="row">
                     <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">Síguenos</a>
@@ -821,7 +814,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="col-md-3 mt-5">
                 <form class="d-flex" role="search">
                     <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
@@ -830,15 +823,15 @@
             </div>
         </div>
     </div>
-    
+
     <!--    =================================================-->
     <!--    FOOTER-->
     <!--    =================================================-->
-    
+
     <!--Our section for your week-->
     <!--    <section class="container">-->
     <!--        <p class="d-flex justify-content-center title-mdl division-top division-bottom mt-5">Our section for your week</p>-->
-    
+
     <!--        <section class="row">-->
     <!--            <section class="col-3 mt-5">-->
     <!--                <h3 class="title-mdl mb-5">Filters:</h3>-->
@@ -855,8 +848,8 @@
     <!--                    <button type="button" class="btn-curve-gray btn btn-outline-dark no-border mb-1"><img src="./img/arrow-right.png" alt="arrow-r"></button>-->
     <!--                </div>-->
     <!--            </section>-->
-    
-    
+
+
     <!--            <section class="col-9">-->
     <!--                <div class="division-bottom mt-4 mb-3"><a href="#"><img src="./img/icono-lupa.png" alt="lupa"></a></div>-->
     <!--                &lt;!&ndash;/////////////////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
@@ -956,5 +949,7 @@
     <!--    </section>&lt;!&ndash;fin de Our section for your week&ndash;&gt;-->
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!--FLICKITY-->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
