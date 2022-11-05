@@ -21,3 +21,10 @@
 @media (max-width: 1480px) {
 .icon-line-height{line-height: 1.5rem;}
 }
+/*
+@media (max-width: 887px){
+    .buttons-order{
+        display: block;
+    };
+    
+}*/
