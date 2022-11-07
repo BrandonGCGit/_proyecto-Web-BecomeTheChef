@@ -15,7 +15,7 @@
   <!--    BOOTSTRAP-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
   <!--    CSS-->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../main.css">
 </head>
 <body>
 <main>
@@ -29,8 +29,8 @@
         <div class="col-sm-6 text-black">
           
           <div class="d-flex justify-content-center">
-            <a href="index.php">
-              <img class="mt-2" src="./img/brand.png" alt="">
+            <a href="../index.php">
+              <img class="mt-2" src="../img/brand.png" alt="">
             </a>
           </div>
           
@@ -39,7 +39,7 @@
           <!--                  ==============================================================================================================-->
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-4 pt-xl-0 mt-xl-n5 justify-content-center">
             
-            <form action="php/_users_insert.php" method="post">
+            <form action="insert.php" method="post">
               
               <!--                                                    ========================-->
               <!--                                                    Nombre & SegundoNombre-->
@@ -102,7 +102,7 @@
               <!--                                                    ========================================-->
               
               
-              <p class="mb-4">Ya tiene una cuenta? <a href="./login.html" class="link-info">Iniciar Sesion</a></p>
+              <p class="mb-4">Ya tiene una cuenta? <a href="../login.html" class="link-info">Iniciar Sesion</a></p>
   
               <p class="text-center fs-6 link-dark">Al unirte, aceptas los <a href="#!" class="link-dark">Términos y Política de privacidad</a></p>
             
@@ -121,7 +121,7 @@
         <!--        BackGround IMG-->
         <!--        ==================================================-->
         <div class="col-sm-6 px-0 d-none d-sm-block">
-          <img src="./img/background-register.png"
+          <img src="../img/background-register.png"
                alt="Login image" class="w-100 vh-100 img-optionsLogin">
         </div>
         <!--        ==================================================-->
