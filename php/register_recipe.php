@@ -41,9 +41,13 @@ $data_Occasion = $database->select("tb_occasion", "*");
     <section class="container-fluid px-0">
         <div class="card no-border">
             <div class="row g-0">
-                <div class="col-sm-4 px-0 d-none d-sm-block">
-                    <img src="../img/img-registroReceta.png" class="w-75 img-optionsLogin" alt="img">
-                </div>
+
+                
+                    <div class="col-sm-4 px-0 d-none d-sm-block prueba-black prueba-prueba">
+                        <img src="img/img-registroReceta.png" class="w-100 img-optionsLogin" alt="img-registro-receta">
+                        <!--<div class="prueba-prueba w-100 img-optionsLogin"></div>-->
+                    </div>
+                
                 <!--*******************************************************-->
                 <div class="col-md-8">
                     <div class="card-body">
@@ -256,7 +260,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
 
     </section>
 
-
+    
 
 
     <!--SCRIPT-->
