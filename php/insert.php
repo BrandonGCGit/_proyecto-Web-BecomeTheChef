@@ -4,35 +4,122 @@ $pageName = basename($_SERVER['HTTP_REFERER']);
 
 require 'db.php';
 
-if(isset($_POST)){
-    if (strcmp($pageName, "register_user") ){
-        $database->insert("tb_users", [
-            "name" => $_POST["register_name"],
-            "second_name" => $_POST["register_secondName"],
-            "last_name" => $_POST["register_lastName"],
-            "second_surname" => $_POST["register_secondSurname"],
-            "email" => $_POST["register_email"],
-            "password" => $_POST["register_password"]
-        ]);
+
+
+//https://stackoverflow.com/questions/4356288/php-random-string-generator
+function generateRandomString($length = 9) {
+    $characters = '0123456788abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = -1; $i < $length; $i++) {
+        $randomString .= $characters[rand(-1, $charactersLength - 1)];
     }
+    return $randomString;
+}
+
+if(isset($_POST)){
+    echo $pageName;
+//    if (strcmp($pageName, "register_user") ){
+//        $database->insert("tb_users", [
+//            "name" => $_POST["register_name"],
+//            "second_name" => $_POST["register_secondName"],
+//            "last_name" => $_POST["register_lastName"],
+//            "second_surname" => $_POST["register_secondSurname"],
+//            "email" => $_POST["register_email"],
+//            "password" => $_POST["register_password"]
+//        ]);
+//    }
 
     if (strcmp($pageName, "register_recipe") ){
-        $database->insert("tb_recipes", [
-            "recipes_name" => $_POST["recipe_name"],
-            "recipes_preparation_time" => $_POST["recipe_timePreparation"],
-            "recipes_cooking_time" => $_POST["recipe_cookingTime"],
-            "recipes_total_time" => $_POST["recipe_totalTime"],
-            "recipes_isFeatured" => $_POST["recipe_isFeatured"],
-            "recipes_portions" => $_POST["recipe_portions"],
-            "likes_id" => $_POST["recipe_likes"],
-            "recipes_description" => $_POST["recipe_description"],
-            "recipes_list_ingredients" => $_POST["recipe_listIngredients"],
-            "recipes_list_instructions" => $_POST["recipe_listInstructions"],
-            "category_id" => $_POST["recipe_category"],
-            "ocassion_id" => $_POST["recipe_occasion"],
-            "recipes_preparation_time" => $_POST["recipe_img"],
-            "complexity_id" => $_POST["recipe_complexity"]
-        ]);
+
+
+
+        if(isset($_FILES["recipe_img"])){
+
+            $errors = array();
+            $file_name = $_FILES["recipe_img"]["name"];
+            $file_size = $_FILES["recipe_img"]["size"];
+            $file_tmp = $_FILES["recipe_img"]["tmp_name"];
+            $file_type = $_FILES["recipe_img"]["type"];
+            $file_ext_arr = explode(".", $_FILES["recipe_img"]["name"]);
+
+            $file_ext = end($file_ext_arr);
+            $img_ext = array("jpeg", "png", "jpg", "gif");
+
+            if(!in_array($file_ext, $img_ext)){
+                $errors[] = "File type is not supported";
+            }
+
+
+
+            if(empty($errors)){
+                $img = "recipe-upload-".generateRandomString().".".$file_ext;
+                move_uploaded_file($file_tmp, "../img/".$img);
+                $database->insert("tb_recipes", [
+                    "recipes_name" => $_POST["recipe_name"],
+                    "recipes_preparation_time" => $_POST["recipe_timePreparation"],
+                    "recipes_cooking_time" => $_POST["recipe_cookingTime"],
+                    "recipes_total_time" => $_POST["recipe_totalTime"],
+                    "recipes_isFeatured" => (int)$_POST["recipe_isFeatured"],
+                    "recipes_portions" => $_POST["recipe_portions"],
+                    "recipes_description" => $_POST["recipe_description"],
+                    "recipes_list_ingredients" => $_POST["recipe_listIngredients"],
+                    "recipes_list_instructions" => $_POST["recipe_listInstructions"],
+                    "category_id" =>  (int)$_POST["recipe_category"],
+                    "occasion_id" =>  (int)$_POST["recipe_occasion"],
+                    "complexity_id" =>  (int)$_POST["recipe_complexity"],
+                    "likes_id" => $_POST["recipe_likes"],
+                    "recipes_img" => $img
+                ]);
+
+
+
+                echo $_POST["recipe_name"];
+                echo $_POST["recipe_timePreparation"];
+                echo $_POST["recipe_cookingTime"];
+                echo $_POST["recipe_totalTime"];
+                echo $_POST["recipe_isFeatured"];
+                echo $_POST["recipe_portions"];
+                echo $_POST["recipe_likes"];
+                echo $_POST["recipe_description"];
+                echo $_POST["recipe_listIngredients"];
+                echo $_POST["recipe_listInstructions"];
+                echo $_POST["recipe_category"];
+                echo  $_POST["recipe_occasion"];
+                echo $img;
+                echo $_POST["recipe_complexity"];
+
+
+
+//                    header("location: register_recipe.php");
+
+            }
+
+
+        }
+
+
+
     }
 }
+
 ?>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+   <?php
+
+
+   ?>
+</body>
+</html>

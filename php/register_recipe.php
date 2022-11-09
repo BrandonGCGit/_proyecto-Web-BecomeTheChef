@@ -2,7 +2,14 @@
 require 'db.php';
 $data_Category = $database->select("tb_category", "*");
 $data_Complexity = $database->select("tb_complexity", "*");
-$data_Ocassion = $database->select("tb_ocassion", "*");
+$data_Occasion = $database->select("tb_occasion", "*");
+
+
+//if(isset($_GET)){
+//    $data = $database->select("tb_recipe", "*", [
+//        "id_recipe" => $_GET["id"]
+//    ]);
+//}
 ?>
 
 
@@ -61,7 +68,7 @@ $data_Ocassion = $database->select("tb_ocassion", "*");
                         <div class="d-flex justify-content-center mt-5">
 
                             <div class="col-8">
-                                <form action="insert.php" method="post">
+                                <form action="insert.php" method="post" enctype="multipart/form-data">
                                     <!--////////////////////////////////////-->
                                     <!--RECIPE NAME INPUT-->
                                     <!--////////////////////////////////////-->
@@ -149,11 +156,11 @@ $data_Ocassion = $database->select("tb_ocassion", "*");
                                                 <option selected>Seleccione la Ocación</option>
                                                 <?php
 
-                                                $len = count($data_Ocassion);
+                                                $len = count($data_Occasion);
                                                 for($i=0; $i < $len; $i++){
-                                                    echo '<option value="'.$data_Ocassion[$i]
-                                                        ['ocassion_id'].'">'.$data_Ocassion[$i]
-                                                        ['ocassion_name'].'</option>';
+                                                    echo '<option value="'.$data_Occasion[$i]
+                                                        ['occasion_id'].'">'.$data_Occasion[$i]
+                                                        ['occasion_name'].'</option>';
                                                 }
 
                                                 ?>

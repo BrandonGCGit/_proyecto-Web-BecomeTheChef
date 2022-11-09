@@ -171,8 +171,8 @@ $data= $database->select("tb_recipes",[
                         echo "<td>".$data[$i]["category_name"]."</td>";
                         echo "<td>".$data[$i]["occasion_name"]."</td>";
                         echo "<td>".$data[$i]["complexity_name"]."</td>";
-                        echo "<td><a href='edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a>
-                <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a></td>";
+                        echo "<td><a href='edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
                         echo "</tr>";
                     }
 
