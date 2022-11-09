@@ -5,6 +5,7 @@
 
 /*Vendors*/
 @import "vendors/_bootstrap.css";
+@import "vendors/hover-min.css";
 
 /*Base stuff*/
 @import "base/_base.css";

@@ -4,6 +4,11 @@ $data_Category = $database->select("tb_category", "*");
 $data_Complexity = $database->select("tb_complexity", "*");
 $data_Occasion = $database->select("tb_occasion", "*");
 
+if(isset($_GET)){
+$data = $database->select("tb_recipes", "*", [
+    "recipes_id" => $_GET["recipes_id"]
+]);
+
 
 //if(isset($_GET)){
 //    $data = $database->select("tb_recipe", "*", [
@@ -54,7 +59,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
 
                         <!--TOP BUTTOM-CLOSE-->
                         <div class="flex-row-reverse d-flex p-2 p-3 m-2">
-                            <button class="btn btn-primary btn-close-constume" type="button-close">
+                            <button class="btn btn-primary btn-close-constume" type="button-close" onclick="history.back();">
                                 <i class="d-flex justify-content-center align-self-center m-0 px-0 fa-solid fa-x"></i>
                             </button>
                         </div>

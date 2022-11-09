@@ -71,31 +71,31 @@ $data= $database->select("tb_recipes",[
         <!--==========================================-->
         <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
             <div class="container">
-                <a class="navbar-brand " href="#"><img src="../img/brand.png" alt="Brand Become The Chef"></a>
+                <a class="navbar-brand  hvr-float-shadow" href="../index.php"><img src="../img/brand.png" alt="Brand Become The Chef"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
                     <form class="d-flex mt-xxl-5" role="search">
-                        <button class="btn border-0" type="submit"><img src="../img/icono-lupa.png" alt=""></button>
+                        <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
                         <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link" aria-current="page" href="index.php">Inicio</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link" aria-current="page" href="#">Sobre Nosotros</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link" aria-current="page" href="#">Contáctanos</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
                     <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4">Iniciar Sesión</button>
+                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
                     </a>
                     <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-primary btn-lg   bt-orange mt-xxl-5">Registrarse</button>
+                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
                     </a>
                 </div>
             </div>
@@ -138,8 +138,10 @@ $data= $database->select("tb_recipes",[
                             <div class="accordion-body">
                                 <button type="button" class="btn btn-outline-warning text-dark border-0 mb-3">
                                     <img class="me-2" src="./img/todolist.png" alt="">Ver lista</button>
-                                <button type="button" class="btn btn-outline-warning text-dark border-0">
-                                    <img class="me-2" src="./img/editing-recipe.png" alt="">Crear Receta</button>
+                                    <a class="no-decorations-link text-decoration-none text-black" href="./register_recipe.php">
+                                        <button type="button" class="btn btn-outline-warning text-dark border-0">
+                                        <img class="me-2" src="./img/editing-recipe.png" alt="">Crear Receta</button>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +173,7 @@ $data= $database->select("tb_recipes",[
                         echo "<td>".$data[$i]["category_name"]."</td>";
                         echo "<td>".$data[$i]["occasion_name"]."</td>";
                         echo "<td>".$data[$i]["complexity_name"]."</td>";
-                        echo "<td><a href='edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                        echo "<td><a href='#?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
                 <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
                         echo "</tr>";
                     }

@@ -17,7 +17,7 @@ function generateRandomString($length = 9) {
     return $randomString;
 }
 
-if(isset($_POST)){
+if(isset($_POST)) {
     echo $pageName;
 //    if (strcmp($pageName, "register_user") ){
 //        $database->insert("tb_users", [
@@ -52,47 +52,42 @@ if(isset($_POST)){
 
 
 
+            echo empty($errors);
             if(empty($errors)){
                 $img = "recipe-upload-".generateRandomString().".".$file_ext;
                 move_uploaded_file($file_tmp, "../img/".$img);
+                echo "A punto de insert";
                 $database->insert("tb_recipes", [
+//                    "recipes_name" => "Brandon",
                     "recipes_name" => $_POST["recipe_name"],
+//                    "recipes_preparation_time" => "2min",
                     "recipes_preparation_time" => $_POST["recipe_timePreparation"],
+//                    "recipes_cooking_time" => "43min",
                     "recipes_cooking_time" => $_POST["recipe_cookingTime"],
+//                    "recipes_total_time" => "34min",
                     "recipes_total_time" => $_POST["recipe_totalTime"],
+//                    "recipes_isFeatured" => "0",
                     "recipes_isFeatured" => (int)$_POST["recipe_isFeatured"],
+//                    "recipes_portions" => "9",
                     "recipes_portions" => $_POST["recipe_portions"],
+//                    "recipes_description" => "SUPER DESCRIPTIO",
                     "recipes_description" => $_POST["recipe_description"],
+//                    "recipes_list_ingredients" => "Super ingredientes",
                     "recipes_list_ingredients" => $_POST["recipe_listIngredients"],
+//                    "recipes_list_instructions" => "super instructiosn",
                     "recipes_list_instructions" => $_POST["recipe_listInstructions"],
+//                    "category_id" =>  1,
                     "category_id" =>  (int)$_POST["recipe_category"],
+//                    "occasion_id" =>  1,
                     "occasion_id" =>  (int)$_POST["recipe_occasion"],
+//                    "complexity_id" => 1,
                     "complexity_id" =>  (int)$_POST["recipe_complexity"],
+//                    "likes_id" => 1,
                     "likes_id" => $_POST["recipe_likes"],
+//                    "recipes_img" => "IMG"
                     "recipes_img" => $img
                 ]);
-
-
-
-                echo $_POST["recipe_name"];
-                echo $_POST["recipe_timePreparation"];
-                echo $_POST["recipe_cookingTime"];
-                echo $_POST["recipe_totalTime"];
-                echo $_POST["recipe_isFeatured"];
-                echo $_POST["recipe_portions"];
-                echo $_POST["recipe_likes"];
-                echo $_POST["recipe_description"];
-                echo $_POST["recipe_listIngredients"];
-                echo $_POST["recipe_listInstructions"];
-                echo $_POST["recipe_category"];
-                echo  $_POST["recipe_occasion"];
-                echo $img;
-                echo $_POST["recipe_complexity"];
-
-
-
-//                    header("location: register_recipe.php");
-
+                    header("location: register_recipe.php");
             }
 
 

@@ -15,7 +15,11 @@
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 
+<!--    SPLIDE-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+<!--    AOS ANIMATION-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!--    CSS-->
     <link rel="stylesheet" href="./main.css">
 </head>
@@ -31,7 +35,7 @@
         <!--==========================================-->
         <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
             <div class="container">
-                <a class="navbar-brand " href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
+                <a class="navbar-brand  hvr-float-shadow" href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,20 +46,20 @@
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5" aria-current="page" href="index.php">Inicio</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5" aria-current="page" href="#">Sobre Nosotros</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5" aria-current="page" href="#">Contáctanos</a>
+                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
                     <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5">Iniciar Sesión</button>
+                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
                     </a>
                     <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-primary btn-lg   bt-orange mt-xxl-5 ff-lato fs-5">Registrarse</button>
+                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
                     </a>
                 </div>
             </div>
@@ -142,12 +146,13 @@
                 class="splide"
                 aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
             <div class="splide__track">
-                <ul class="splide__list">
+                <ul class="splide__list mb-1">
                     <li class="splide__slide">
-                        <!--===================-->
+                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -179,6 +184,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -187,7 +193,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -219,6 +226,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -227,7 +235,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -259,6 +268,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -267,7 +277,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -299,6 +310,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -307,7 +319,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -338,6 +351,7 @@
                                     <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <!--===================-->
                         <!--CARD-->
@@ -512,7 +526,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card mt-2">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2 hvr-curl-top-right">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -544,6 +559,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -552,7 +568,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card mt-2">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -584,6 +601,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -592,7 +610,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card mt-2">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -624,6 +643,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
@@ -632,7 +652,8 @@
                         <!--===================-->
                         <!--CARD-->
                         <!--===================-->
-                        <div class="card mt-2">
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -663,6 +684,7 @@
                                     <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <!--===================-->
                         <!--CARD-->
@@ -739,130 +761,21 @@
     <!--    =================================================-->
     <!--    FOOTER-->
     <!--    =================================================-->
-
-    <!--Our section for your week-->
-    <!--    <section class="container">-->
-    <!--        <p class="d-flex justify-content-center title-mdl division-top division-bottom mt-5">Our section for your week</p>-->
-
-    <!--        <section class="row">-->
-    <!--            <section class="col-3 mt-5">-->
-    <!--                <h3 class="title-mdl mb-5">Filters:</h3>-->
-    <!--                <div class="title-mdl d-flex justify-content-between division-bottom">-->
-    <!--                    <p class="mt-2">Categoría</p>-->
-    <!--                    <button type="button" class="btn-curve-gray btn btn-outline-dark no-border mb-1"><img src="./img/arrow-right.png" alt="arrow-r"></button>-->
-    <!--                </div>-->
-    <!--                <div class="d-flex title-mdl justify-content-between division-bottom">-->
-    <!--                    <p class="mt-2">Complejidad</p>-->
-    <!--                    <button type="button" class="btn-curve-gray btn btn-outline-dark no-border mb-1"><img src="./img/arrow-right.png" alt="arrow-r"></button>-->
-    <!--                </div>-->
-    <!--                <div class="d-flex title-mdl justify-content-between division-bottom">-->
-    <!--                    <p class="mt-2">Ocaciones</p>-->
-    <!--                    <button type="button" class="btn-curve-gray btn btn-outline-dark no-border mb-1"><img src="./img/arrow-right.png" alt="arrow-r"></button>-->
-    <!--                </div>-->
-    <!--            </section>-->
-
-
-    <!--            <section class="col-9">-->
-    <!--                <div class="division-bottom mt-4 mb-3"><a href="#"><img src="./img/icono-lupa.png" alt="lupa"></a></div>-->
-    <!--                &lt;!&ndash;/////////////////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
-    <!--                <section class="row division-bottom">-->
-    <!--                    <div class="col">-->
-    <!--                        <div class="card">-->
-    <!--                            <img src="./img/pancake.png" class="card-img-top" alt="pancakes">-->
-    <!--                            <div class="card-body">-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex">-->
-    <!--                                    <h5 class="card-text-title card-title w-100">Pancakes</h5>-->
-    <!--                                    <a class="btn-curve-yellow btn btn-primary" href="#" role="button"><i class="btn-icon fa-solid fa-arrow-right"></i></a>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-clock align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">15 Min</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-utensils align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">20 Porciones</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-signal align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">Fácil</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                    </div>-->
-    <!--                    &lt;!&ndash;/////////////////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
-    <!--                    <div class="col">-->
-    <!--                        <div class="card">-->
-    <!--                            <img src="./img/pancake.png" class="card-img-top" alt="pancakes">-->
-    <!--                            <div class="card-body">-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex">-->
-    <!--                                    <h5 class="card-text-title card-title w-100">Pancakes</h5>-->
-    <!--                                    <a class="btn-curve-yellow btn btn-primary" href="#" role="button"><i class="btn-icon fa-solid fa-arrow-right"></i></a>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-clock align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">15 Min</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-utensils align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">20 Porciones</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-signal align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">Fácil</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                    </div>-->
-    <!--                    &lt;!&ndash;/////////////////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
-    <!--                    <div class="col">-->
-    <!--                        <div class="card">-->
-    <!--                            <img src="./img/pancake.png" class="card-img-top" alt="pancakes">-->
-    <!--                            <div class="card-body">-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex">-->
-    <!--                                    <h5 class="card-text-title card-title w-100">Pancakes</h5>-->
-    <!--                                    <a class="btn-curve-yellow btn btn-primary" href="#" role="button"><i class="btn-icon fa-solid fa-arrow-right"></i></a>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-clock align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">15 Min</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-utensils align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">20 Porciones</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                                <div class="d-flex justify-content-start">-->
-    <!--                                    <i class="fa-solid fa-signal align-self-center"></i>-->
-    <!--                                    <p class="card-text align-self-center card-text">Fácil</p>-->
-    <!--                                </div>-->
-    <!--                                &lt;!&ndash;**********************************************&ndash;&gt;-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                    &lt;!&ndash;/////////////////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
-    <!--                </section>-->
-    <!--            </section>-->
-    <!--        </section>-->
-    <!--    </section>&lt;!&ndash;fin de Our section for your week&ndash;&gt;-->
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+<!--Splide-->
 <script src="js/_splide.js"></script>
+<!--Splide autoScroll-->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script src="./js/_splide_autoScroll.js"></script>
+
+<!--AOS ANIMATION-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 </html>
