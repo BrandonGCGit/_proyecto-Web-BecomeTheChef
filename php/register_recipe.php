@@ -1,3 +1,12 @@
+<?php
+require 'db.php';
+$data_Category = $database->select("tb_category", "*");
+$data_Complexity = $database->select("tb_complexity", "*");
+$data_Ocassion = $database->select("tb_ocassion", "*");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +26,7 @@
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--    CSS-->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../main.css">
 </head>
 
 <body>
@@ -56,14 +65,14 @@
                         <div class="d-flex justify-content-center mt-5">
 
                             <div class="col-8">
-                                <form>
+                                <form action="insert.php" method="post">
                                     <!--////////////////////////////////////-->
                                     <!--RECIPE NAME INPUT-->
                                     <!--////////////////////////////////////-->
                                     <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label">Nombre de la
+                                        <label for="recipe_name" class="form-label">Nombre de la
                                             receta</label>
-                                        <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
+                                        <input type="text" class="bg-gray form-control" id="recipe_name" name="recipe_name"
                                             placeholder="Ingrese el nombre de la receta">
                                     </div>
                                     <!--////////////////////////////////////-->
@@ -73,17 +82,24 @@
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                         <div class="col-6 pe-2">
-                                            <label for="formFileLg" class="form-label">Imagen</label>
-                                            <input class="bg-gray form-control" id="formFileLg" type="file">
+                                            <label for="recipe_img" class="form-label">Imagen</label>
+                                            <input class="bg-gray form-control" id="recipe_img" name="recipe_img" type="file">
                                         </div>
 
                                         <div class="col-6 ps-2">
-                                            <label for="" class="form-label">Complejidad</label>
-                                            <select class="bg-gray form-select" aria-label="Default select example">
+                                            <label for="recipe_complexity" class="form-label">Complejidad</label>
+                                            <select class="bg-gray form-select" aria-label="Default select example" name="recipe_complexity">
                                                 <option selected>Seleccione la dificultad</option>
-                                                <option value="1">Fácil</option>
-                                                <option value="2">Intermedio</option>
-                                                <option value="3">Avanzado</option>
+                                                <?php
+
+                                                $len = count($data_Complexity);
+                                                for($i=0; $i < $len; $i++){
+                                                    echo '<option value="'.$data_Complexity[$i]
+                                                        ['complexity_id'].'">'.$data_Complexity[$i]
+                                                        ['complexity_name'].'</option>';
+                                                }
+
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -94,22 +110,26 @@
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                         <div class="col-6 pe-2">
-                                            <label for="formGroupExampleInput" class="form-label">Tiempo de
+                                            <label for="recipe_timePreparation" class="form-label">Tiempo de
                                                 Preparación</label>
-                                            <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
-                                                placeholder="Ingrese el tiempo de preparación">
+                                            <input type="text" class="bg-gray form-control" id="recipe_timePreparation"
+                                                placeholder="Ingrese el tiempo de preparación" name="recipe_timePreparation">
                                         </div>
 
                                         <div class="col-6 ps-2">
                                             <label for="" class="form-label">Categoría</label>
-                                            <select class="bg-gray form-select" aria-label="Default select example">
+                                            <select class="bg-gray form-select" aria-label="Default select example" name="recipe_category">
                                                 <option selected>Seleccione la categoría</option>
-                                                <option value="1">Desayuno</option>
-                                                <option value="2">Bebidas</option>
-                                                <option value="3">Entradas</option>
-                                                <option value="4">Almuerzo</option>
-                                                <option value="5">Postres</option>
-                                                <option value="6">Sopas</option>
+                                                <?php
+
+                                                $len = count($data_Category);
+                                                for($i=0; $i < $len; $i++){
+                                                    echo '<option value="'.$data_Category[$i]
+                                                        ['category_id'].'">'.$data_Category[$i]
+                                                        ['category_name'].'</option>';
+                                                }
+
+                                                ?>
                                             </select>
                                         </div>
 
@@ -121,25 +141,26 @@
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                         <div class="col-6 pe-2">
-                                            <label for="formGroupExampleInput" class="form-label">Tiempo de
+                                            <label for="recipe_cookingTime" class="form-label">Tiempo de
                                                 Cocción</label>
-                                            <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
-                                                placeholder="Ingrese el tiempo de cocción">
+                                            <input type="text" class="bg-gray form-control" id="recipe_cookingTime"
+                                                placeholder="Ingrese el tiempo de cocción" name="recipe_cookingTime">
                                         </div>
 
                                         <div class="col-6 ps-2">
-                                            <label for="" class="form-label">Ocación</label>
-                                            <select class="bg-gray form-select" aria-label="Default select example">
+                                            <label for="recipe_occasion" class="form-label">Ocación</label>
+                                            <select class="bg-gray form-select" aria-label="Default select example" name="recipe_occasion">
                                                 <option selected>Seleccione la Ocación</option>
-                                                <option value="1">Todas</option>
-                                                <option value="2">Cumpleaños</option>
-                                                <option value="3">Día del padre</option>
-                                                <option value="4">Día de la madre</option>
-                                                <option value="5">Día del niño</option>
-                                                <option value="6">Navidad</option>
-                                                <option value="7">Semana Santa</option>
-                                                <option value="8">Verano</option>
+                                                <?php
 
+                                                $len = count($data_Ocassion);
+                                                for($i=0; $i < $len; $i++){
+                                                    echo '<option value="'.$data_Ocassion[$i]
+                                                        ['ocassion_id'].'">'.$data_Ocassion[$i]
+                                                        ['ocassion_name'].'</option>';
+                                                }
+
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -152,17 +173,17 @@
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                         <div class="col-6 pe-2">
-                                            <label for="formGroupExampleInput" class="form-label">Tiempo Total</label>
-                                            <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
-                                                placeholder="Ingrese el tiempo Total">
+                                            <label for="recipe_totalTime" class="form-label">Tiempo Total</label>
+                                            <input type="text" class="bg-gray form-control" id="recipe_totalTime"
+                                                placeholder="Ingrese el tiempo Total" name="recipe_totalTime">
                                         </div>
 
                                         <div class="col-6 ps-2">
-                                            <label for="" class="form-label">¿Receta Destacada?</label>
-                                            <select class="bg-gray form-select" aria-label="Default select example">
+                                            <label for="recipe_isFeatured" class="form-label">¿Receta Destacada?</label>
+                                            <select class="bg-gray form-select" aria-label="Default select example" name="recipe_isFeatured">
                                                 <option selected>Seleccione una opción</option>
-                                                <option value="1">Si</option>
-                                                <option value="2">No</option>
+                                                <option value="0">Si</option>
+                                                <option value="1">No</option>
                                             </select>
                                         </div>
 
@@ -174,14 +195,14 @@
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                         <div class="col-6 pe-2">
-                                            <label for="formGroupExampleInput" class="form-label">Porciones</label>
-                                            <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
-                                                placeholder="Ingrese la cantidad de porciones">
+                                            <label for="recipe_portions" class="form-label">Porciones</label>
+                                            <input type="text" class="bg-gray form-control" id="recipe_portions"
+                                                placeholder="Ingrese la cantidad de porciones" name="recipe_portions">
                                         </div>
                                         <div class="col-6 ps-2">
-                                            <label for="formGroupExampleInput" class="form-label">Votos</label>
-                                            <input type="text" class="bg-gray form-control" id="formGroupExampleInput"
-                                                placeholder="Ingrese los votos de la receta">
+                                            <label for="recipe_likes" class="form-label">Votos</label>
+                                            <input type="text" class="bg-gray form-control" id="recipe_likes"
+                                                placeholder="Ingrese los votos de la receta" name="recipe_likes">
                                         </div>
                                     </div>
                                     <!--////////////////////////////////////-->
@@ -190,21 +211,21 @@
                                     <!--DESCRIPTION, INGREDIENTS LIST,PREPARATION INTRUCTIONS-->
                                     <!--////////////////////////////////////-->
                                     <div class="container px-0 mt-5">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                                        <textarea class="bg-gray form-control" id="exampleFormControlTextarea1"
-                                            rows="6"></textarea>
+                                        <label for="recipe_description" class="form-label">Descripción</label>
+                                        <textarea class="bg-gray form-control" id="recipe_description"
+                                            rows="6" name="recipe_description"></textarea>
                                     </div>
                                     <div class="container px-0 mt-5">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Lista de
+                                        <label for="recipe_listIngredients" class="form-label">Lista de
                                             Ingredientes</label>
-                                        <textarea class="bg-gray form-control" id="exampleFormControlTextarea1"
-                                            rows="6"></textarea>
+                                        <textarea class="bg-gray form-control" id="recipe_listIngredients"
+                                            rows="6" name="recipe_listIngredients"></textarea>
                                     </div>
                                     <div class="container px-0 mt-5">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Intrucciones de
+                                        <label for="recipe_listInstructions" class="form-label">Intrucciones de
                                             preparación</label>
-                                        <textarea class="bg-gray form-control" id="exampleFormControlTextarea1"
-                                            rows="6"></textarea>
+                                        <textarea class="bg-gray form-control" id="recipe_listInstructions"
+                                            rows="6" name="recipe_listInstructions"></textarea>
                                     </div>
 
                                     <div class="mt-5 mb-5 pt-3 d-flex justify-content-around">
