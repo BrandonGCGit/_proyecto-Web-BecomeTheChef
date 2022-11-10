@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
     <!--FONT AWESOME-->
@@ -55,12 +53,8 @@
                             <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
-                    <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                    </a>
-                    <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
-                    </a>
+                        <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
+                        <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
                 </div>
             </div>
         </nav>
@@ -723,44 +717,44 @@
                 <div class="row mt-5">
                     <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> About Us</a>
                 </div>
-            </div>
+</div>
 
-            <div class="col-md-3 border-end border-2 mt-5 text-center">
-                <div class="row">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">Síguenos</a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-facebook-f me-3"></i>
-                        Facebook
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-instagram me-3"></i>
-                        Instagram
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-twitter me-3"></i>
-                        Twitter
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 mt-5">
-                <form class="d-flex" role="search">
-                    <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
-                    <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent w-100 border-dark opacity-50 border-white text-white" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-        </div>
+<div class="col-md-3 border-end border-2 mt-5 text-center">
+    <div class="row">
+        <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">Síguenos</a>
     </div>
+    <div class="row my-3">
+        <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
+            <i class="fa-brands fa-facebook-f me-3"></i>
+            Facebook
+        </a>
+    </div>
+    <div class="row my-3">
+        <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
+            <i class="fa-brands fa-instagram me-3"></i>
+            Instagram
+        </a>
+    </div>
+    <div class="row my-3">
+        <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
+            <i class="fa-brands fa-twitter me-3"></i>
+            Twitter
+        </a>
+    </div>
+</div>
 
-    <!--    =================================================-->
-    <!--    FOOTER-->
-    <!--    =================================================-->
+<div class="col-md-3 mt-5">
+    <form class="d-flex" role="search">
+        <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
+        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent w-100 border-dark opacity-50 border-white text-white" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+</div>
+</div>
+
+<!--    =================================================-->
+<!--    FOOTER-->
+<!--    =================================================-->
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
@@ -776,6 +770,9 @@
 <script>
     AOS.init();
 </script>
+
+<!--_index.js-->
+<script src="./js/_index.js"></script>
 
 </body>
 </html>
