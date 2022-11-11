@@ -39,7 +39,7 @@
           <!--                  ==============================================================================================================-->
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-4 pt-xl-0 mt-xl-n5 justify-content-center">
             
-            <form action="insert.php" method="post">
+            <form action="./insert.php" method="post">
               
               <!--                                                    ========================-->
               <!--                                                    Nombre & SegundoNombre-->
