@@ -710,53 +710,84 @@
     <!--    =================================================-->
     <!--    FOOTER-->
     <!--    =================================================-->
+    <footer>
 
-    <div class="container clr-black h-75">
-        <div class="row row-cols-md-4">
-            <div class="col-md-3 border-end border-2 mt-5 text-center border-opacity-25">
-                <img src="./img/brand-white.png" alt="image brand white">
-            </div>
-            <div class="col-md-3 border-end border-2 mt-5 text-center">
-                <div class="row">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> Home</a>
-                </div>
-                <div class="row mt-5">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> About Us</a>
-                </div>
-            </div>
+<div class="container-fluid clr-black">
+    
+        <!--==============================-->
+                    <div class="col pt-3 pb-3 text-center border-bottom bg-transparent">
+                        <a href="#"><img src="./img/brand-white.png" alt="img-brand-white"></a>
+      
+                    </div>
+    
+    <!--FIN DE LA PRIMERA COLUM-->
+    <!--INICIO DE LA SEGUNDA COLUM-->
+    <div class="row align-items-center">
+    
+         <!--INICIO ROW 02-->            
+                    <div class="col pt-3 text-center">
+                        <!--
+                        <div class="row align-items-start">
+                            <a class="text-white text-decoration-none" href="#">Síguenos</a>
+                        </div>
+                        -->
+                        <div class="d-flex justify-content-center">
+                            <div class="row my-3 d-flex me-5 link-social-media">
+                                <a class="text-white text-decoration-none" href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                            <div class="row my-3 d-flex me-5 link-social-media">
+                                <a class="text-white text-decoration-none" href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </div>
+                            
+                                <div class="row my-3 d-flex link-social-media">
+                                    <a class="text-white text-decoration-none" href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        Twitter
+                                    </a>
+                                
+                                </div>
+                            
+                        </div>
 
-            <div class="col-md-3 border-end border-2 mt-5 text-center">
-                <div class="row">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">Síguenos</a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-facebook-f me-3"></i>
-                        Facebook
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-instagram me-3"></i>
-                        Instagram
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-twitter me-3"></i>
-                        Twitter
-                    </a>
-                </div>
-            </div>
 
-            <div class="col-md-3 mt-5">
-                <form class="d-flex" role="search">
-                    <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
-                    <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent w-100 border-dark opacity-50 border-white text-white" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-        </div>
-    </div>
+                    </div>
+
+                </div>
+    <!--FIN DE LA SEGUNDA COLUM-->
+    <!--INICIO DE LA TERCER COLUM-->
+                <div class="row pb-2 pt-3">
+                     
+                     <div class="col d-flex justify-content-center">
+                            <a class="text-white text-decoration-none px-3 link-trans" href="#"> Home</a>
+
+                        <div class="border-start px-3">
+                            <a class="text-white text-decoration-none link-trans" href="#"> About Us</a>
+                        </div>
+                        <div class="border-start px-3">
+                            <a class="text-white text-decoration-none link-trans" href="#"> Contact</a>
+                        </div>
+                    </div>
+                </div>
+    <!--FIN DE LA TERCER COLUM-->
+
+                <div class="row pb-4 pt-4 text-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="txt-terms mb-0">Copyright 2022</p>
+                        <p class="txt-terms mt-0">proyecto ITM desarrollo de aplicaciones interactivas_TM4100</p>
+                    </div>
+
+                </div>
+
+</div><!--FIN DEL CONTAINER-->
+          
+
+</footer>
 
     <!--    =================================================-->
     <!--    FOOTER-->
