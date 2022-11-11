@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
                     <form class="d-flex mt-xxl-5" role="search">
                         <button class="btn border-0" type="submit"></button>
-                        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control-lg border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
                         <li class="nav-item mx-xl-3">
@@ -126,7 +126,7 @@
             <div class="row d-flex text-center m-auto">
 
                 <div class="col-sm-6 m-auto">
-                    <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 12 Recetas de la semana</h3>
+                    <h3 class="ff-lato fw-bold">The <span class="bg-orange">Best</span> 7 Recipes of the Week</h3>
                 </div>
 
             </div>
@@ -150,7 +150,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -177,7 +177,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="./front-receta.html" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -219,7 +219,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="./front-receta.html" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -261,7 +261,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning btn-outline-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +276,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -303,7 +303,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -345,7 +345,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +383,7 @@
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
-        <h3 class="text-center ff-lato fw-bold"> Our selection for your week</h3>
+        <h3 class="text-center ff-lato fw-bold">Become The <span class="bg-orange">Chef</span></h3>
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
@@ -433,27 +433,13 @@
                             <div class="accordion-body m-1 p-1 pt-3">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">tres</button>
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Dinner</button>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Amus</button>
-                                        <!--                                        <div class="card-optionsDefault text-center rounded-1">-->
-                                        <!--                                            <div class="card-ciruculeDefault mt-3 pt-3">-->
-                                        <!--                                                <img class="" src="./img/egg.png" alt="image of a egg">-->
-                                        <!--                                            </div>-->
-                                        <!--                                            <p class="text">Desayunos</p>-->
-                                        <!--                                        </div>-->
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Breackfast</button>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Desayunos</button>
-                                        <!--                                        <button type="button" class="btn btn-sm" data-bs-toggle="button">-->
-                                        <!--                                            <div class="text-center rounded-1">-->
-                                        <!--                                                <div class="mt-3 p-3 circule-cardOptions">-->
-                                        <!--                                                    <img class="" src="./img/egg.png" alt="">-->
-                                        <!--                                                </div>-->
-                                        <!--                                                <p class="text-center">desayunos</p>-->
-                                        <!--                                            </div>-->
-                                        <!--                                        </button>-->
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Lunch</button>
                                     </div>
                                 </div>
                             </div>
@@ -469,13 +455,13 @@
                             <div class="accordion-body m-2 p-1">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Hard</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Easy</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Medium</button>
                                     </div>
                                 </div>
                             </div>
@@ -491,13 +477,22 @@
                             <div class="accordion-body m-2 p-1">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Christmas</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Holidays</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">New Year</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">FDF</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Holidays</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">New Year</button>
                                     </div>
                                 </div>
                             </div>
@@ -552,7 +547,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -594,7 +589,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -636,7 +631,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -678,7 +673,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -687,6 +682,47 @@
                         <!--CARD-->
                         <!--===================-->
                     </div>
+                    <div class="col-md-4">
+                        <!--===================-->
+                        <!--CARD-->
+                        <!--===================-->
+                        <div data-aos="flip-left" data-aos-duration='600'>
+                            <div class="card mt-2">
+                            <a href="#">
+                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
+                            </a>
+                            <div class="card-body">
+                                <!--**********************************************-->
+                                <div class="d-flex">
+                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
+                                        <h5 class=" card-text-title">Pancakes</h5>
+                                    </a>
+                                </div>
+                                <!--**********************************************-->
+                                <div class="d-flex justify-content-start">
+                                    <i class="fa-solid fa-clock align-self-center"></i>
+                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
+                                </div>
+                                <!--**********************************************-->
+                                <div class="d-flex justify-content-start">
+                                    <i class="fa-solid fa-utensils align-self-center"></i>
+                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
+                                </div>
+                                <!--**********************************************-->
+                                <div class="d-flex justify-content-start">
+                                    <i class="fa-solid fa-signal align-self-center"></i>
+                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
+                                </div>
+                                <!--**********************************************-->
+                                <div class="text-end">
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!--===================-->
+                        <!--CARD-->
+                        <!--===================-->
                 </div>
             </div>
             <!--            ======================-->
@@ -729,21 +765,21 @@
                         </div>
                         -->
                         <div class="d-flex justify-content-center">
-                            <div class="row my-3 d-flex me-5 link-social-media">
-                                <a class="text-white text-decoration-none" href="#">
+                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                                <a class="text-decoration-none clr-white icon-Facebook" href="#">
                                     <i class="fa-brands fa-facebook-f"></i>
                                     Facebook
                                 </a>
                             </div>
-                            <div class="row my-3 d-flex me-5 link-social-media">
-                                <a class="text-white text-decoration-none" href="#">
+                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                                <a class="text-white text-decoration-none icon-Instagram" href="#">
                                     <i class="fa-brands fa-instagram"></i>
                                     Instagram
                                 </a>
                             </div>
                             
-                                <div class="row my-3 d-flex link-social-media">
-                                    <a class="text-white text-decoration-none" href="#">
+                                <div class="row my-3 d-flex hvr-bounce-in">
+                                    <a class="text-decoration-none no-decorations-link clr-white icon-Twitter" href="#">
                                         <i class="fa-brands fa-twitter"></i>
                                         Twitter
                                     </a>
@@ -761,13 +797,13 @@
                 <div class="row pb-2 pt-3">
                      
                      <div class="col d-flex justify-content-center">
-                            <a class="text-white text-decoration-none px-3 link-trans" href="#"> Home</a>
+                            <a class="text-white text-decoration-none px-3 hvr-grow-shadow" href="#"> Home</a>
 
                         <div class="border-start px-3">
-                            <a class="text-white text-decoration-none link-trans" href="#"> About Us</a>
+                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> About Us</a>
                         </div>
                         <div class="border-start px-3">
-                            <a class="text-white text-decoration-none link-trans" href="#"> Contact</a>
+                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> Contact</a>
                         </div>
                     </div>
                 </div>

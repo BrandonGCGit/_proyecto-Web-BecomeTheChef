@@ -1,18 +1,18 @@
 <?php
-require 'db.php';
-
-$data= $database->select("tb_recipes",[
-    "[>]tb_category"=>["category_id" => "category_id"],
-    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
-    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
-],[
-    "tb_recipes.recipes_id",
-    "tb_recipes.recipes_name",
-    "tb_category.category_name",
-    "tb_occasion.occasion_name",
-    "tb_complexity.complexity_name"
-]);
-?>
+//require 'db.php';
+//
+//$data= $database->select("tb_recipes",[
+//    "[>]tb_category"=>["category_id" => "category_id"],
+//    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
+//    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
+//],[
+//    "tb_recipes.recipes_id",
+//    "tb_recipes.recipes_name",
+//    "tb_category.category_name",
+//    "tb_occasion.occasion_name",
+//    "tb_complexity.complexity_name"
+//]);
+//?>
 
 
 <!DOCTYPE html>

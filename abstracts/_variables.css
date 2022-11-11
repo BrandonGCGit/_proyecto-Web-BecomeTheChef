@@ -31,6 +31,8 @@
     --clr-white: #ffff;
     --clr-d-gray: #2D3338;
     --clr-a-gray: hsl(0, 0%, 85%);
+    --clr-light-blue: hsl(197, 100%, 47%);
+    --clr-facebook-blue: hsl(220, 46%, 48%);
     
 
 /*text-style*/

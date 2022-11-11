@@ -1,9 +1,11 @@
 <?php
-require 'db.php';
-$data_Category = $database->select("tb_category", "*");
-$data_Complexity = $database->select("tb_complexity", "*");
-$data_Occasion = $database->select("tb_occasion", "*");
+//require 'db.php';
+//$data_Category = $database->select("tb_category", "*");
+//$data_Complexity = $database->select("tb_complexity", "*");
+//$data_Occasion = $database->select("tb_occasion", "*");
 
+
+//EDITAR
 //if(isset($_GET)) {
 //    $data = $database->select("tb_recipes", "*", [
 //        "recipes_id" => $_GET["recipes_id"]
@@ -48,10 +50,8 @@ $data_Occasion = $database->select("tb_occasion", "*");
 <section class="container-fluid px-0">
     <div class="card no-border"></div>
         <div class="row g-0">
-
-
             <div class="col-sm-4 px-0 d-none d-sm-block prueba-black prueba-prueba">
-                <img src="img/img-registroReceta.png" class="w-100 img-optionsLogin" alt="img-registro-receta">
+                <img src="../img/img-registroReceta.png" class="w-100 img-optionsLogin" alt="img-registro-receta">
                 <!--<div class="prueba-prueba w-100 img-optionsLogin"></div>-->
             </div>
 
@@ -106,12 +106,12 @@ $data_Occasion = $database->select("tb_occasion", "*");
                                             <option selected>Seleccione la dificultad</option>
                                             <?php
 
-                                            $len = count($data_Complexity);
-                                            for($i=0; $i < $len; $i++){
-                                                echo '<option id="recipe_complexity" value="'.$data_Complexity[$i]
-                                                    ['complexity_id'].'">'.$data_Complexity[$i]
-                                                    ['complexity_name'].'</option>';
-                                            }
+//                                            $len = count($data_Complexity);
+//                                            for($i=0; $i < $len; $i++){
+//                                                echo '<option id="recipe_complexity" value="'.$data_Complexity[$i]
+//                                                    ['complexity_id'].'">'.$data_Complexity[$i]
+//                                                    ['complexity_name'].'</option>';
+//                                            }
 
                                             ?>
                                         </select>
@@ -136,12 +136,12 @@ $data_Occasion = $database->select("tb_occasion", "*");
                                             <option selected>Seleccione la categoría</option>
                                             <?php
 
-                                            $len = count($data_Category);
-                                            for($i=0; $i < $len; $i++){
-                                                echo '<option id="recipe_category"  value="'.$data_Category[$i]
-                                                    ['category_id'].'">'.$data_Category[$i]
-                                                    ['category_name'].'</option>';
-                                            }
+//                                            $len = count($data_Category);
+//                                            for($i=0; $i < $len; $i++){
+//                                                echo '<option id="recipe_category"  value="'.$data_Category[$i]
+//                                                    ['category_id'].'">'.$data_Category[$i]
+//                                                    ['category_name'].'</option>';
+//                                            }
 
                                             ?>
                                         </select>
@@ -167,12 +167,12 @@ $data_Occasion = $database->select("tb_occasion", "*");
                                             <option selected>Seleccione la Ocación</option>
                                             <?php
 
-                                            $len = count($data_Occasion);
-                                            for($i=0; $i < $len; $i++){
-                                                echo '<option id="recipe_occasion" value="'.$data_Occasion[$i]
-                                                    ['occasion_id'].'">'.$data_Occasion[$i]
-                                                    ['occasion_name'].'</option>';
-                                            }
+//                                            $len = count($data_Occasion);
+//                                            for($i=0; $i < $len; $i++){
+//                                                echo '<option id="recipe_occasion" value="'.$data_Occasion[$i]
+//                                                    ['occasion_id'].'">'.$data_Occasion[$i]
+//                                                    ['occasion_name'].'</option>';
+//                                            }
 
                                             ?>
                                         </select>
@@ -263,88 +263,6 @@ $data_Occasion = $database->select("tb_occasion", "*");
         </div>
 
     </section>
-
-    <footer>
-
-        <div class="container-fluid clr-black">
-            
-                <!--==============================-->
-                            <div class="col pt-3 pb-3 text-center border-bottom bg-transparent">
-                                <a href="#"><img src="./img/brand-white.png" class="img-w10" alt="img-brand-white"></a>
-              
-                            </div>
-            
-            <!--FIN DE LA PRIMERA COLUM-->
-            <!--INICIO DE LA SEGUNDA COLUM-->
-            <div class="row align-items-center">
-            
-                 <!--INICIO ROW 02-->            
-                            <div class="col pt-3 text-center">
-                                <!--
-                                <div class="row align-items-start">
-                                    <a class="text-white text-decoration-none" href="#">Síguenos</a>
-                                </div>
-                                -->
-                                <div class="d-flex justify-content-center">
-                                    <div class="row my-3 d-flex me-5 link-social-media">
-                                        <a class="text-white text-decoration-none" href="#">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                            Facebook
-                                        </a>
-                                    </div>
-                                    <div class="row my-3 d-flex me-5 link-social-media">
-                                        <a class="text-white text-decoration-none" href="#">
-                                            <i class="fa-brands fa-instagram"></i>
-                                            Instagram
-                                        </a>
-                                    </div>
-                                    
-                                        <div class="row my-3 d-flex link-social-media">
-                                            <a class="text-white text-decoration-none" href="#">
-                                                <i class="fa-brands fa-twitter"></i>
-                                                Twitter
-                                            </a>
-                                        
-                                        </div>
-                                    
-                                </div>
-
-
-                            </div>
-    
-                        </div>
-            <!--FIN DE LA SEGUNDA COLUM-->
-            <!--INICIO DE LA TERCER COLUM-->
-                        <div class="row pb-2 pt-3">
-                             
-                             <div class="col d-flex justify-content-center">
-                                    <a class="text-white text-decoration-none px-3 link-trans" href="#"> Home</a>
-
-                                <div class="border-start px-3">
-                                    <a class="text-white text-decoration-none link-trans" href="#"> About Us</a>
-                                </div>
-                                <div class="border-start px-3">
-                                    <a class="text-white text-decoration-none link-trans" href="#"> Contact</a>
-                                </div>
-                            </div>
-                        </div>
-            <!--FIN DE LA TERCER COLUM-->
-
-                        <div class="row pb-4 pt-4 text-center">
-                            <div class="d-flex flex-column justify-content-center">
-                                <p class="txt-terms mb-0">Copyright 2022</p>
-                                <p class="txt-terms mt-0">proyecto ITM desarrollo de aplicaciones interactivas_TM4100</p>
-                            </div>
-
-                        </div>
-
-        </div><!--FIN DEL CONTAINER-->
-                  
-
-    </footer>
-    
-
-
 
 
 <!--SCRIPT-->
