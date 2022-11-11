@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
     <!--FONT AWESOME-->
@@ -39,7 +42,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
                     <form class="d-flex mt-xxl-5" role="search">
-                        <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
+                        <button class="btn border-0" type="submit"></button>
                         <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
@@ -521,7 +524,7 @@
                         <!--CARD-->
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2 hvr-curl-top-right">
+                            <div class="card mt-2">
                             <a href="#">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
@@ -772,7 +775,7 @@
 </script>
 
 <!--_index.js-->
-<script src="./js/_index.js"></script>
+<script src="js/_buttoms_href.js"></script>
 
 </body>
 </html>

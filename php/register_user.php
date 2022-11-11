@@ -23,7 +23,7 @@
   <!--  ===============================================================================================================================-->
   <!--  Nombre & SegundoNombre & PrimerApellido & SegundoApellido & Email & Usuario & Contraseña & ConfirmarContrasena & BtnRegistrarse-->
   <!--  ===============================================================================================================================-->
-  <section class="vh-100">
+  <div class="vh-100">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6 text-black">
@@ -130,7 +130,7 @@
       
       </div>
     </div>
-  </section>
+  </div>
   <!--  ===============================================================================================================================-->
   <!--  Nombre & SegundoNombre & PrimerApellido & SegundoApellido & Email & Usuario & Contraseña & ConfirmarContrasena & BtnRegistrarse-->
   <!--  ===============================================================================================================================-->
