@@ -786,14 +786,7 @@
 
 </footer>
 
-<div class="col-md-3 mt-5">
-    <form class="d-flex" role="search">
-        <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
-        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent w-100 border-dark opacity-50 border-white text-white" type="search" placeholder="Search" aria-label="Search">
-    </form>
-</div>
-</div>
-</div>
+
 
 <!--    =================================================-->
 <!--    FOOTER-->
