@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receta</title>
@@ -12,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&display=swap"
+            rel="stylesheet">
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--    CSS-->
@@ -22,202 +24,37 @@
 
 <body>
 
-    <header>
-        <!--==========================================-->
-        <!--NAVBAR-->
-        <!--==========================================-->
-        <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
-            <div class="container">
-                <a class="navbar-brand  hvr-float-shadow" href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
-                    <form class="d-flex mt-xxl-5" role="search">
-                        <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
-                        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                    <ul class="navbar-nav mt-xxl-5">
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="index.php">Inicio</a>
-                        </li>
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
-                        </li>
-                    </ul>
-                    <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                    </a>
-                    <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <!--=========================-->
-        <!--LINE BETWEEN SECTIONS-->
-        <!--=========================-->
-        <div class="container-sm text-success">
-            <div class="row row-cols-1">
-                <div class="col-sm">
-                    <hr class="border border-dark border-1">
-                </div>
+<header>
+    <!--==========================================-->
+    <!--NAVBAR-->
+    <!--==========================================-->
+    <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
+        <div class="container">
+            <a class="navbar-brand  hvr-float-shadow" href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
+                <form class="d-flex mt-xxl-5" role="search">
+                    <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
+                    <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <ul class="navbar-nav mt-xxl-5">
+                    <li class="nav-item mx-xl-3">
+                        <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-xl-3">
+                        <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item mx-xl-3">
+                        <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
+                    </li>
+                </ul>
+                <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
+                <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
             </div>
         </div>
-        <!--==============================-->
-        <!--LINE BETWEEN SECTIONS-->
-        <!--==============================-->
-
-        <!--==========================================-->
-        <!--NAVBAR-->
-        <!--==========================================-->
-    </header>
-
-    <!--==========================================-->
-    <!--RECIPE TOP DESCRIPTION-->
-    <!--==========================================-->
-
-    <section class="container mt-5">
-
-        <!--==========================================-->
-        <!--RECIPE CARD TOP DESCRIPTION-->
-        <!--==========================================-->
-
-        <div class="card mb-3 no-border">
-            <div class="row g-0">
-                <!--////////RECIPE TOP IMG///////-->
-                <div class="col-md-8">
-                    <img src="./img/hamburguesa.jpg" class="img-fluid rounded-start" alt="hamburguesa">
-                    <div class="d-flex justify-content-between mt-3">
-                            <div class="d-flex">
-                                    <div class="p-2 d-flex data-txt-rg">
-                                        <i class="icon-line-height fa-solid fa-thumbs-up"></i>
-                                        <p class="px-2">1580</p>
-                                    </div>
-                                    <div class="p-2 d-flex data-txt-rg">
-                                        <i class="icon-line-height fa-solid fa-thumbs-down"></i>
-                                        <p class="px-2">400</p>
-                                    </div>
-                            </div>
-
-                            <div class="d-flex">
-                                <div class="p-2 data-icon-rg">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </div>
-
-                                <div class="p-2 data-icon-rg">
-                                    <i class="fa-solid fa-share"></i>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <!--////////RECIPE TOP IMG///////-->
-
-                <!--==========================================-->
-                <!--RECIPE DESCRIPTION SECTION-->
-                <!--==========================================-->
-                <div class="col-md-4">
-                    <div class="align-card-body card-body">
-                        <h5 class="card-title text-md-yellow mb-0">Recetas Destacadas</h5>
-                    </div>
-
-                    <!--==========================================-->
-                    <!--RECIPE DESCRIPTION CARD BODY-->
-                    <!--==========================================-->
-                    <div class="align-card-body card-body">
-                        <div class="d-flex">
-                            <h5 class="recipe-title card-title">Hamburguesa</h5>
-                        </div>
-                        <!--**********************************************-->
-
-                        <p class="body-recipe-text">
-                            Una hamburguesa es un sándwich hecho a base de carne molida o
-                            de origen vegetal, ​ aglutinada en forma de filete cocinado a
-                            la parrilla o a la plancha, aunque también puede freírse u hornearse.
-                        </p>
-                        <!--**********************************************-->
-                        <div class="d-flex justify-content-start">
-                            <i class="fa-solid fa-clock align-self-center"></i>
-                            <p class="data-text-rg card-text">15 Min</p>
-                        </div>
-                        <!--**********************************************-->
-                        <div class="d-flex justify-content-start">
-                            <i class="fa-solid fa-utensils align-self-center"></i>
-                            <p class="data-text-rg card-text">20 Porciones</p>
-                        </div>
-                        <!--**********************************************-->
-                        <div class="d-flex justify-content-start">
-                            <i class="fa-solid fa-signal align-self-center"></i>
-                            <p class="data-text-rg card-text">Fácil</p>
-                        </div>
-
-
-                    
-
-
-
-
-                    </div>
-
-
-                    <!--==========================================-->
-                    <!--RECIPE DESCRIPTION CARD BODY-->
-                    <!--==========================================-->
-
-                </div>
-                <!--==========================================-->
-                <!--RECIPE DESCRIPTION SECTION-->
-                <!--==========================================-->
-            </div>
-
-        </div>
-
-
-        <!--==========================================-->
-        <!--RECIPE CARD TOP DESCRIPTION-->
-        <!--==========================================-->
-    </section>
-    <!--==========================================-->
-    <!--END RECIPE TOP DESCRIPTION-->
-    <!--==========================================-->
-
-    <!--==========================================-->
-    <!--SHOW RECIPE FILTERS-->
-    <!--==========================================-->
-
-    <section class="container">
-
-        <!--Section filters title-->
-        <div class="container-sm text-success">
-            <p class="text-md-gray mb-0">Filtros</p>
-        </div>
-        <!--Section filters title-->
-        <!--bottom line-->
-        <div class="row row-cols-1">
-            <div class="col-sm">
-                <hr class="border border-dark border-1">
-            </div>
-        </div>
-        <!--bottom line-->
-
-        <!-- filters section-->
-        <section class="container-sm">
-
-            <div class="row-cols-1">
-                <div class="line-img col d-flex">
-                    <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
-                    <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
-                    <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
-                </div>
-        </section>
-        <!-- filters section-->
-    </section>
-    <!--==============================-->
-    <!--END FILTER'S SECTION-->
-    <!--==============================-->
+    </nav>
     <!--=========================-->
     <!--LINE BETWEEN SECTIONS-->
     <!--=========================-->
@@ -232,381 +69,596 @@
     <!--LINE BETWEEN SECTIONS-->
     <!--==============================-->
 
-    <!--==============================-->
-    <!--ACORDION SECTION-->
-    <!--==============================-->
+    <!--==========================================-->
+    <!--NAVBAR-->
+    <!--==========================================-->
+</header>
 
-    <div class="container">
+<!--==========================================-->
+<!--RECIPE TOP DESCRIPTION-->
+<!--==========================================-->
 
-        <div class="accordion mb-5" id="accordionPanelsStayOpenExample">
+<section class="container mt-5">
 
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--//////////////////////////////DESCRIPCION///////////////////////////////////////////-->
-            <div class="accordion-item only-a-border">
-                <h3 class="btn-acc accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                        aria-controls="panelsStayOpen-collapseOne">
-                        Descripcion
-                    </button>
-                </h3>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
-                        <p class="body-recipe-text">Una hamburguesa es un sándwich hecho a base de carne molida o de
-                            origen vegetal,1​ aglutinada en forma de filete
-                            cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse. Fuera del
-                            ámbito de habla hispana,
-                            es más común encontrar la denominación estadounidense burger, acortamiento de hamburger. Se
-                            presenta en un pan
-                            ligero partido en dos que posee forma de óvalo. Suele estar acompañada de aros de cebolla,
-                            hojas de lechuga, alguna
-                            rodaja de tomate, láminas de encurtidos y papas fritas. Se suele aliñar con algún
-                            condimento, como puede ser la salsa
-                            de tomate (o kétchup), la mostaza, el relish, o la mayonesa, entre otros.</p>
+    <!--==========================================-->
+    <!--RECIPE CARD TOP DESCRIPTION-->
+    <!--==========================================-->
+
+    <div class="card mb-3 no-border">
+        <div class="row g-0">
+            <!--////////RECIPE TOP IMG///////-->
+            <div class="col-md-8">
+                <img src="./img/hamburguesa.jpg" class="img-fluid rounded-start" alt="hamburguesa">
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex">
+                        <div class="p-2 d-flex data-txt-rg">
+                            <i class="icon-line-height fa-solid fa-thumbs-up"></i>
+                            <p class="px-2">1580</p>
+                        </div>
+                        <div class="p-2 d-flex data-txt-rg">
+                            <i class="icon-line-height fa-solid fa-thumbs-down"></i>
+                            <p class="px-2">400</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!--//////////////////////////////FIN DESCRIPCION///////////////////////////////////////////-->
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--////////////////////////////////LISTA DE INGREDIENTES/////////////////////////////////////////-->
-            <div class="accordion-item only-a-border">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseTwo">
-                        Lista de Ingredientes
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingTwo">
-                    <div class="accordion-body">
-                        <div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Kg. carne res molida</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
+                    <div class="d-flex">
+                        <div class="p-2 data-icon-rg">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Cebolla</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Huevo</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Ajo</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Perejil</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Sal</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Pimienta</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Salsa de tomate</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Pieza de pan</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label d-flex" for="flexCheckDefault">
-                                    <i class="icon-line-height fa-solid fa-utensils"></i>
-                                    <p class="text-ing">Aceite de oliva</p>
-                                </label>
-                            </div>
-                            <!--/////////////////////////////////////////////////////////////////////////-->
-
+                        <div class="p-2 data-icon-rg">
+                            <i class="fa-solid fa-share"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--/////////////////////////////////FIN DE LA LISTA DE INGREDIENTES////////////////////////////////////////-->
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--//////////////////////////////////INSTRUCCIONES///////////////////////////////////////-->
-            <div class="accordion-item only-a-border">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                    <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree">
-                        Instrucciones para la preparación
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingThree">
-                    <div class="accordion-body">
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 1</h3>
-                            <p class="p-4 body-recipe-text">
-                                Preparamos todos los ingredientes que vamos a necesitar
-                                para elaborar las hamburguesas: 1 kilo de carne picada,
-                                1 cebolla, 1 huevo, 3 dientes de ajo, perejil fresco, sal,
-                                pimienta, salsa de mostaza, 1 pieza de pan duro y aceite de
-                                oliva.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 2</h3>
-                            <p class="p-3 body-recipe-text">
-                                Lo primero que debes hacer para conseguir una hamburguesas
-                                con una textura única es poner el pan duro (puede ser del día anterior)
-                                en remojo: colócalo en un recipiente hondo y cúbrelo de agua natural.
-                                Deja que empape bien.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 3</h3>
-                            <p class="p-3 body-recipe-text">
-                                Mientras se empapa bien el pan comenzamos a picar los ingredientes:
-                                primero la cebolla muy finita y luego lo dientes de ajo, también en
-                                trozos pequeños.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 4</h3>
-                            <p class="p-3 body-recipe-text">
-                                Continuamos picando finamente el perejil fresco. Una vez picados todos
-                                estos ingredientes, los reservamos.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="p-3 division-bottom text-rg-gray">Paso 5</h3>
-                            <p>
-                                Salpimentamos la carne al gusto. Colocamos ésta en un recipiente lo suficientemente
-                                grande para que nos permita trabajar luego cómodamente con ella.Escurrimos el pan
-                                y lo colocamos junto a la carne. Añadimos también el huevo, la cebolla y el ajo, el
-                                perejil y la salsa de mostaza, que dará un sabor singular a este plato.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 6</h3>
-                            <p class="p-3 body-recipe-text">
-                                Ha llegado el momento más divertido: el de mancharnos las manos. Hay que mezclar
-                                bien todos los ingredientes de manera que quede una masa homogénea.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 7</h3>
-                            <p class="p-3 body-recipe-text">
-                                Una vez conseguida esa masa, hay que hacer bolas medianas con la carne, como si se
-                                tratasen
-                                de albóndigas, pero en lugar de dejarlas completamente redondas, achatarlas un poco. Así
-                                conseguiremos la característica forma de las hamburguesas.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 8</h3>
-                            <p class="p-3 body-recipe-text">
-                                En una sartén grande pon aceite a calentar. Cuando esté lo suficientemente caliente,
-                                añade las hamburguesas y fríelas hasta que se doren al gusto.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 9</h3>
-                            <p class="p-3 body-recipe-text">
-                                Una vez estén fritas ve retirándolas del fuego y colócalas en un plato.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <div>
-                            <h3 class="division-bottom text-rg-gray">Paso 10</h3>
-                            <p class="p-3 body-recipe-text">
-                                Puedes tomarlas a la manera habitual: con pan, acompañada de una loncha de queso y
-                                algunas verduras y salsas, o bien de una manera más ligera, sin pan ni acompañamientos,
-                                e incluso, puedes darle un toque gourmet con algún queso manchego, de cabra o incluso
-                                queso azul y un poco de cebolla caramelizada.
-                            </p>
-                        </div>
-                        <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                        <!--  -->
-                    </div>
-                </div>
-            </div>
+            <!--////////RECIPE TOP IMG///////-->
 
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--/////////////////////////////////////////////////////////////////////////-->
-            <!--/////////////////////////////////////////////////////////////////////////-->
+            <!--==========================================-->
+            <!--RECIPE DESCRIPTION SECTION-->
+            <!--==========================================-->
+            <div class="col-md-4">
+                <div class="align-card-body card-body">
+                    <h5 class="card-title text-md-yellow mb-0">Recetas Destacadas</h5>
+                </div>
+
+                <!--==========================================-->
+                <!--RECIPE DESCRIPTION CARD BODY-->
+                <!--==========================================-->
+                <div class="align-card-body card-body">
+                    <div class="d-flex">
+                        <h5 class="recipe-title card-title">Hamburguesa</h5>
+                    </div>
+                    <!--**********************************************-->
+
+                    <p class="body-recipe-text">
+                        Una hamburguesa es un sándwich hecho a base de carne molida o
+                        de origen vegetal, ​ aglutinada en forma de filete cocinado a
+                        la parrilla o a la plancha, aunque también puede freírse u hornearse.
+                    </p>
+                    <!--**********************************************-->
+                    <div class="d-flex justify-content-start">
+                        <i class="fa-solid fa-clock align-self-center"></i>
+                        <p class="data-text-rg card-text">15 Min</p>
+                    </div>
+                    <!--**********************************************-->
+                    <div class="d-flex justify-content-start">
+                        <i class="fa-solid fa-utensils align-self-center"></i>
+                        <p class="data-text-rg card-text">20 Porciones</p>
+                    </div>
+                    <!--**********************************************-->
+                    <div class="d-flex justify-content-start">
+                        <i class="fa-solid fa-signal align-self-center"></i>
+                        <p class="data-text-rg card-text">Fácil</p>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+                <!--==========================================-->
+                <!--RECIPE DESCRIPTION CARD BODY-->
+                <!--==========================================-->
+
+            </div>
+            <!--==========================================-->
+            <!--RECIPE DESCRIPTION SECTION-->
+            <!--==========================================-->
         </div>
 
-        <div class="container text-center mb-5">
-            <p class="text-md-yellow">Recetas Relacionada</p>
-            
-            <div class="row align-items-start">
-              <!--//////////////////////-->
+    </div>
 
-              <div class="col">
+
+    <!--==========================================-->
+    <!--RECIPE CARD TOP DESCRIPTION-->
+    <!--==========================================-->
+</section>
+<!--==========================================-->
+<!--END RECIPE TOP DESCRIPTION-->
+<!--==========================================-->
+
+<!--==========================================-->
+<!--SHOW RECIPE FILTERS-->
+<!--==========================================-->
+
+<div class="container">
+
+    <!--Section filters title-->
+    <div class="container-sm text-success">
+        <p class="text-md-gray mb-0">Filtros</p>
+    </div>
+    <!--Section filters title-->
+    <!--bottom line-->
+    <div class="row row-cols-1">
+        <div class="col-sm">
+            <hr class="border border-dark border-1">
+        </div>
+    </div>
+    <!--bottom line-->
+
+    <!-- filters section-->
+    <div class="container-sm">
+        <div class="row-cols-1">
+            <div class="line-img col d-flex">
+                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
+                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
+                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
+            </div>
+        </div>
+    </div>
+    <!-- filters section-->
+</div>
+<!--==============================-->
+<!--END FILTER'S SECTION-->
+<!--==============================-->
+<!--=========================-->
+<!--LINE BETWEEN SECTIONS-->
+<!--=========================-->
+<div class="container-sm text-success">
+    <div class="row row-cols-1">
+        <div class="col-sm">
+            <hr class="border border-dark border-1">
+        </div>
+    </div>
+</div>
+<!--==============================-->
+<!--LINE BETWEEN SECTIONS-->
+<!--==============================-->
+
+<!--==============================-->
+<!--ACORDION SECTION-->
+<!--==============================-->
+
+<div class="container">
+
+    <div class="accordion mb-5" id="accordionPanelsStayOpenExample">
+
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--//////////////////////////////DESCRIPCION///////////////////////////////////////////-->
+        <div class="accordion-item only-a-border">
+            <h3 class="btn-acc accordion-header" id="panelsStayOpen-headingOne">
+                <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                    Descripcion
+                </button>
+            </h3>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                 aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <p class="body-recipe-text">Una hamburguesa es un sándwich hecho a base de carne molida o de
+                        origen vegetal,1​ aglutinada en forma de filete
+                        cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse. Fuera del
+                        ámbito de habla hispana,
+                        es más común encontrar la denominación estadounidense burger, acortamiento de hamburger. Se
+                        presenta en un pan
+                        ligero partido en dos que posee forma de óvalo. Suele estar acompañada de aros de cebolla,
+                        hojas de lechuga, alguna
+                        rodaja de tomate, láminas de encurtidos y papas fritas. Se suele aliñar con algún
+                        condimento, como puede ser la salsa
+                        de tomate (o kétchup), la mostaza, el relish, o la mayonesa, entre otros.</p>
+                </div>
+            </div>
+        </div>
+        <!--//////////////////////////////FIN DESCRIPCION///////////////////////////////////////////-->
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--////////////////////////////////LISTA DE INGREDIENTES/////////////////////////////////////////-->
+        <div class="accordion-item only-a-border">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                    Lista de Ingredientes
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                 aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Kg. carne res molida</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Cebolla</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Huevo</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Ajo</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Perejil</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Sal</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Pimienta</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Salsa de tomate</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Pieza de pan</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label d-flex"></label>
+                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
+                            <p class="text-ing">Aceite de oliva</p>
+                        </div>
+                        <!--                            =====================-->
+                        <!--                            Ingrediente-->
+                        <!--                            =====================-->
+                        <!--/////////////////////////////////////////////////////////////////////////-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/////////////////////////////////FIN DE LA LISTA DE INGREDIENTES////////////////////////////////////////-->
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--//////////////////////////////////INSTRUCCIONES///////////////////////////////////////-->
+        <div class="accordion-item only-a-border">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="text-rg-gray accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                    Instrucciones para la preparación
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                 aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 1</h3>
+                        <p class="p-4 body-recipe-text">
+                            Preparamos todos los ingredientes que vamos a necesitar
+                            para elaborar las hamburguesas: 1 kilo de carne picada,
+                            1 cebolla, 1 huevo, 3 dientes de ajo, perejil fresco, sal,
+                            pimienta, salsa de mostaza, 1 pieza de pan duro y aceite de
+                            oliva.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 2</h3>
+                        <p class="p-3 body-recipe-text">
+                            Lo primero que debes hacer para conseguir una hamburguesas
+                            con una textura única es poner el pan duro (puede ser del día anterior)
+                            en remojo: colócalo en un recipiente hondo y cúbrelo de agua natural.
+                            Deja que empape bien.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 3</h3>
+                        <p class="p-3 body-recipe-text">
+                            Mientras se empapa bien el pan comenzamos a picar los ingredientes:
+                            primero la cebolla muy finita y luego lo dientes de ajo, también en
+                            trozos pequeños.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 4</h3>
+                        <p class="p-3 body-recipe-text">
+                            Continuamos picando finamente el perejil fresco. Una vez picados todos
+                            estos ingredientes, los reservamos.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="p-3 division-bottom text-rg-gray">Paso 5</h3>
+                        <p>
+                            Salpimentamos la carne al gusto. Colocamos ésta en un recipiente lo suficientemente
+                            grande para que nos permita trabajar luego cómodamente con ella.Escurrimos el pan
+                            y lo colocamos junto a la carne. Añadimos también el huevo, la cebolla y el ajo, el
+                            perejil y la salsa de mostaza, que dará un sabor singular a este plato.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 6</h3>
+                        <p class="p-3 body-recipe-text">
+                            Ha llegado el momento más divertido: el de mancharnos las manos. Hay que mezclar
+                            bien todos los ingredientes de manera que quede una masa homogénea.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 7</h3>
+                        <p class="p-3 body-recipe-text">
+                            Una vez conseguida esa masa, hay que hacer bolas medianas con la carne, como si se
+                            tratasen
+                            de albóndigas, pero en lugar de dejarlas completamente redondas, achatarlas un poco. Así
+                            conseguiremos la característica forma de las hamburguesas.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 8</h3>
+                        <p class="p-3 body-recipe-text">
+                            En una sartén grande pon aceite a calentar. Cuando esté lo suficientemente caliente,
+                            añade las hamburguesas y fríelas hasta que se doren al gusto.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 9</h3>
+                        <p class="p-3 body-recipe-text">
+                            Una vez estén fritas ve retirándolas del fuego y colócalas en un plato.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <div>
+                        <h3 class="division-bottom text-rg-gray">Paso 10</h3>
+                        <p class="p-3 body-recipe-text">
+                            Puedes tomarlas a la manera habitual: con pan, acompañada de una loncha de queso y
+                            algunas verduras y salsas, o bien de una manera más ligera, sin pan ni acompañamientos,
+                            e incluso, puedes darle un toque gourmet con algún queso manchego, de cabra o incluso
+                            queso azul y un poco de cebolla caramelizada.
+                        </p>
+                    </div>
+                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!--/////////////////////////////////////////////////////////////////////////-->
+    </div>
+
+    <div class="container text-center mb-5">
+        <p class="text-md-yellow">Recetas Relacionada</p>
+
+        <div class="row align-items-start">
+            <!--//////////////////////-->
+
+            <div class="col">
                 <!--//////////////////////-->
                 <div class="card">
                     <img src="./img/pancake.png" class="card-img-top" alt="card-img">
                     <div class="card-body">
-                      <h5 class="card-title">Pancakes</h5>
-                      <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-clock align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        <h5 class="card-title">Pancakes</h5>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">fácil</p>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-utensils align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">20 porciones</p>
-                    </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-signal align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">fácil</p>
-                    </div>
-                      <div class="text-end">
-                        <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
-              <!--//////////////////////-->
-
-              <div class="col">
-                <div class="card">
-                    <img src="./img/pancake.png" class="card-img-top" alt="card-img">
-                    <div class="card-body">
-                      <h5 class="card-title">Pancakes</h5>
-                      <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-clock align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">15 min</p>
-                    </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-utensils align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">20 porciones</p>
-                    </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-signal align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">fácil</p>
-                    </div>
-                      <div class="text-end">
-                        <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
+            </div>
             <!--//////////////////////-->
 
-              <div class="col">
+            <div class="col">
                 <div class="card">
                     <img src="./img/pancake.png" class="card-img-top" alt="card-img">
                     <div class="card-body">
-                      <h5 class="card-title">Pancakes</h5>
-                      <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-clock align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        <h5 class="card-title">Pancakes</h5>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">fácil</p>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-utensils align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">20 porciones</p>
+                </div>
+            </div>
+            <!--//////////////////////-->
+
+            <div class="col">
+                <div class="card">
+                    <img src="./img/pancake.png" class="card-img-top" alt="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Pancakes</h5>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">fácil</p>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-signal align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">fácil</p>
-                    </div>
-                      <div class="text-end">
-                        <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
+            </div>
             <!--//////////////////////-->
             <div class="col">
                 <div class="card">
                     <img src="./img/pancake.png" class="card-img-top" alt="card-img">
                     <div class="card-body">
-                      <h5 class="card-title">Pancakes</h5>
-                      <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-clock align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        <h5 class="card-title">Pancakes</h5>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-clock align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">15 min</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-utensils align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">20 porciones</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fa-solid fa-signal align-self-center"></i>
+                            <p class="card-text align-self-center card-text ms-2">fácil</p>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-utensils align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">20 porciones</p>
-                    </div>
-                    <div class="d-flex justify-content-start">
-                        <i class="fa-solid fa-signal align-self-center"></i>
-                        <p class="card-text align-self-center card-text ms-2">fácil</p>
-                    </div>
-                      <div class="text-end">
-                        <a href="#" class="btn bt-orange btn-lg btn-primary text-center">ver receta</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
+            </div>
             <!--//////////////////////-->
 
-            </div>
+        </div>
 
 
     </div>
@@ -695,11 +747,16 @@
     </footer>
 
 
+</div>
 
-    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--    BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+<script src="./js/_buttoms_href.js"></script>
 </body>
 
 </html>
