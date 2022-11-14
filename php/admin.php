@@ -1,18 +1,28 @@
 <?php
-//require 'db.php';
-//
-//$data= $database->select("tb_recipes",[
-//    "[>]tb_category"=>["category_id" => "category_id"],
-//    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
-//    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
-//],[
-//    "tb_recipes.recipes_id",
-//    "tb_recipes.recipes_name",
-//    "tb_category.category_name",
-//    "tb_occasion.occasion_name",
-//    "tb_complexity.complexity_name"
-//]);
-//?>
+require 'db.php';
+
+//Iniio de ssion
+session_start();
+if (isset($_SESSION["isLoggedIn"])){
+//    Aqui va todo lo que se tiene que ejecutar
+}{
+//    Si no estan logeados se tiene que redirectionar
+    header("location");
+}
+
+
+$data= $database->select("tb_recipes",[
+    "[>]tb_category"=>["category_id" => "category_id"],
+    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
+    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
+],[
+    "tb_recipes.recipes_id",
+    "tb_recipes.recipes_name",
+    "tb_category.category_name",
+    "tb_occasion.occasion_name",
+    "tb_complexity.complexity_name"
+]);
+?>
 
 
 <!DOCTYPE html>
@@ -67,8 +77,10 @@
                             <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
-                    <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                    <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
+                    <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow"><?php echo $_SESSION["email"] ?></button>
+                    <a href="./logout.php">
+                        <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">logout</button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -148,56 +160,24 @@
                     <!--===============================-->
                     <!--RECIPE END-->
                     <!--================================-->
-                    <!--===============================-->
-                    <!--RECIPE START-->
-                    <!--================================-->
-                    <tr>
-                        <th scope="row"><i class='fa-solid fa-utensils me-2'></i>Soup</th>
-                        <td>Dinner</td>
-                        <td>New Year</td>
-                        <td>Hard</td>
-                        <td>
-                            <a href="#"><i class='fa-solid fa-trash pe-3'></i></a>
-                            <a href="#"><i class='fa-solid fa-pen-to-square ps-3'></i></a>
-                        </td>
-                    </tr>
-                    <!--===============================-->
-                    <!--RECIPE END-->
-                    <!--================================-->
-                    <!--===============================-->
-                    <!--RECIPE START-->
-                    <!--================================-->
-                    <tr>
-                        <th scope="row"><i class='fa-solid fa-utensils me-2'></i>Pizza</th>
-                        <td>Lunch</td>
-                        <td>Holidays</td>
-                        <td>Easy</td>
-                        <td>
-                            <a href="#"><i class='fa-solid fa-trash pe-3'></i></a>
-                            <a href="#"><i class='fa-solid fa-pen-to-square ps-3'></i></a>
-                        </td>
-                    </tr>
-                    <!--===============================-->
-                    <!--RECIPE END-->
-                    <!--================================-->
                     </tbody>
 
-                    <!--                    --><?php
-                    //
-                    //                    $len = count($data);
-                    //
-                    //                    for($i=0; $i<$len; $i++){
-                    //                        echo "<th scope='row'><i class='fa-solid fa-utensils me-2'></i>".$data[$i]["recipes_name"]."</th>";
-                    //                        echo "<td>".$data[$i]["category_name"]."</td>";
-                    //                        echo "<td>".$data[$i]["occasion_name"]."</td>";
-                    //                        echo "<td>".$data[$i]["complexity_name"]."</td>";
-                    //                        echo "<td><a href='#?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
-                    //                                    <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
-                    //                        echo "</tr>";
-                    //                    }
-                    //
-                    //                    ?>
-                    <!--                    </tbody>-->
+                                        <?php
+
+                                        $len = count($data);
+
+                                        for($i=0; $i<$len; $i++){
+                                            echo "<th scope='row'><i class='fa-solid fa-utensils me-2'></i>".$data[$i]["recipes_name"]."</th>";
+                                            echo "<td>".$data[$i]["category_name"]."</td>";
+                                            echo "<td>".$data[$i]["occasion_name"]."</td>";
+                                            echo "<td>".$data[$i]["complexity_name"]."</td>";
+                                            echo "<td><a href='#?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                                                        <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
+                                            echo "</tr>";
+                                        }
+
+                                        ?>
+                                        </tbody>
                 </table>
             </div>
         </div>

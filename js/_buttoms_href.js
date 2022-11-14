@@ -1,5 +1,5 @@
 document.getElementById("btn-login").onclick = function () {
-    location.href = "../login.html";
+    location.href = "../php/login.php";
 };
 
 document.getElementById("btn-register").onclick = function () {

@@ -102,7 +102,7 @@
               <!--                                                    ========================================-->
               
               
-              <p class="mb-4">Ya tiene una cuenta? <a href="../login.html" class="link-info">Iniciar Sesion</a></p>
+              <p class="mb-4">Ya tiene una cuenta? <a href="login.php" class="link-info">Iniciar Sesion</a></p>
   
               <p class="text-center fs-6 link-dark">Al unirte, aceptas los <a href="#!" class="link-dark">Términos y Política de privacidad</a></p>
             

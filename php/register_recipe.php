@@ -1,8 +1,8 @@
 <?php
-//require 'db.php';
-//$data_Category = $database->select("tb_category", "*");
-//$data_Complexity = $database->select("tb_complexity", "*");
-//$data_Occasion = $database->select("tb_occasion", "*");
+require 'db.php';
+$data_Category = $database->select("tb_category", "*");
+$data_Complexity = $database->select("tb_complexity", "*");
+$data_Occasion = $database->select("tb_occasion", "*");
 
 
 //EDITAR
@@ -79,7 +79,7 @@
                     <div class="d-flex justify-content-center mt-5">
 
                         <div class="col-8">
-                            <form action="insert.php" method="post" enctype="multipart/form-data">
+                            <form action="./insert.php" method="post" enctype="multipart/form-data">
                                 <!--////////////////////////////////////-->
                                 <!--RECIPE NAME INPUT-->
                                 <!--////////////////////////////////////-->
@@ -106,12 +106,12 @@
                                             <option selected>Seleccione la dificultad</option>
                                             <?php
 
-//                                            $len = count($data_Complexity);
-//                                            for($i=0; $i < $len; $i++){
-//                                                echo '<option id="recipe_complexity" value="'.$data_Complexity[$i]
-//                                                    ['complexity_id'].'">'.$data_Complexity[$i]
-//                                                    ['complexity_name'].'</option>';
-//                                            }
+                                            $len = count($data_Complexity);
+                                            for($i=0; $i < $len; $i++){
+                                                echo '<option id="recipe_complexity" value="'.$data_Complexity[$i]
+                                                    ['complexity_id'].'">'.$data_Complexity[$i]
+                                                    ['complexity_name'].'</option>';
+                                            }
 
                                             ?>
                                         </select>
@@ -136,12 +136,12 @@
                                             <option selected>Seleccione la categoría</option>
                                             <?php
 
-//                                            $len = count($data_Category);
-//                                            for($i=0; $i < $len; $i++){
-//                                                echo '<option id="recipe_category"  value="'.$data_Category[$i]
-//                                                    ['category_id'].'">'.$data_Category[$i]
-//                                                    ['category_name'].'</option>';
-//                                            }
+                                            $len = count($data_Category);
+                                            for($i=0; $i < $len; $i++){
+                                                echo '<option id="recipe_category"  value="'.$data_Category[$i]
+                                                    ['category_id'].'">'.$data_Category[$i]
+                                                    ['category_name'].'</option>';
+                                            }
 
                                             ?>
                                         </select>
@@ -167,12 +167,12 @@
                                             <option selected>Seleccione la Ocación</option>
                                             <?php
 
-//                                            $len = count($data_Occasion);
-//                                            for($i=0; $i < $len; $i++){
-//                                                echo '<option id="recipe_occasion" value="'.$data_Occasion[$i]
-//                                                    ['occasion_id'].'">'.$data_Occasion[$i]
-//                                                    ['occasion_name'].'</option>';
-//                                            }
+                                            $len = count($data_Occasion);
+                                            for($i=0; $i < $len; $i++){
+                                                echo '<option id="recipe_occasion" value="'.$data_Occasion[$i]
+                                                    ['occasion_id'].'">'.$data_Occasion[$i]
+                                                    ['occasion_name'].'</option>';
+                                            }
 
                                             ?>
                                         </select>
