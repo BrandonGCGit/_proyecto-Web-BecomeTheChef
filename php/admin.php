@@ -5,9 +5,9 @@ require 'db.php';
 session_start();
 if (isset($_SESSION["isLoggedIn"])){
 //    Aqui va todo lo que se tiene que ejecutar
-}{
+}else{
 //    Si no estan logeados se tiene que redirectionar
-    header("location");
+//    header("location: login.php");
 }
 
 

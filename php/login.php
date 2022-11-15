@@ -16,7 +16,8 @@ if($_POST){
             session_start();
             $_SESSION["isLoggenIn"] = true;
             $_SESSION["email"] = $email[0]["email"];
-            header("location: admin.php");
+            header("location: ./admin.php");
+            echo "Para admin";
         }else{
             echo "wrong email or password";
         }

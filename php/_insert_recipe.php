@@ -91,7 +91,7 @@ if(isset($_POST)) {
                 ]);
 
                 echo "A punto de insert";
-//                    header("location: register_recipe.php");
+                    header("location: register_recipe.php");
             }
 
 

@@ -79,7 +79,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
                     <div class="d-flex justify-content-center mt-5">
 
                         <div class="col-8">
-                            <form action="./insert.php" method="post" enctype="multipart/form-data">
+                            <form action="_insert_recipe.php" method="post" enctype="multipart/form-data">
                                 <!--////////////////////////////////////-->
                                 <!--RECIPE NAME INPUT-->
                                 <!--////////////////////////////////////-->
