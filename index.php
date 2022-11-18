@@ -11,13 +11,11 @@ $data= $database->select("tb_recipes",[
     "tb_recipes.recipes_name",
     "tb_recipes.recipes_img",
     "tb_recipes.recipes_total_time",
-    "tb_recipes.recipe_portions",
+    "tb_recipes.recipes_portions",
     "tb_category.category_name",
     "tb_occasion.occasion_name",
     "tb_complexity.complexity_name"
 ]);
-var_dump($data);
-
 ?>
 
 
@@ -541,12 +539,10 @@ var_dump($data);
                     <?php
                     $len = count($data);
                     for ($i=0; $i<$len; $i++){
-                        echo "kkkkk" ;
                         $img = $data[$i]["recipes_img"];
-                        echo $img;
                         $name =$data[$i]["recipes_name"];
                         $timeRecipe =$data[$i]["recipes_total_time"];
-                        $recipePortions =$data[$i]["recipe_portions"];
+                        $recipePortions =$data[$i]["recipes_portions"];
                         $complexityName =$data[$i]["complexity_name"];
 
                         echo "<div class = 'col-md-4'>";
@@ -554,7 +550,7 @@ var_dump($data);
                         echo "<div class='card mt-2'>";
                         echo "<a href=''#'>";
 //                        Img de la receta
-                        echo "<img src='./img/".$img."' class='card-img-top' alt='pancakes'>";
+                        echo "<img src='./img/".$img."' class='card-img-top w-100' alt='pancakes'>";
                         echo "</a>";
                         echo "<div class='card-body'>";
                         echo "<div class='d-flex'>";
@@ -566,12 +562,12 @@ var_dump($data);
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-clock align-self-center'></i>";
 //                        Tiempo de la receta
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."min</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-utensils align-self-center'></i>";
 //                        Porciones
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>.".$recipePortions."Porciones</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions." Porciones</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-signal align-self-center'></i>";

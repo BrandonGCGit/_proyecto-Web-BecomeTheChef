@@ -2,13 +2,13 @@
 require 'db.php';
 
 //Iniio de ssion
-session_start();
-if (isset($_SESSION["isLoggedIn"])){
-//    Aqui va todo lo que se tiene que ejecutar
-}else{
-//    Si no estan logeados se tiene que redirectionar
-//    header("location: login.php");
-}
+//session_start();
+//if (isset($_SESSION["isLoggedIn"])){
+////    Aqui va todo lo que se tiene que ejecutar
+//}else{
+////    Si no estan logeados se tiene que redirectionar
+////    header("location: login.php");
+//}
 
 
 $data= $database->select("tb_recipes",[
@@ -22,6 +22,7 @@ $data= $database->select("tb_recipes",[
     "tb_occasion.occasion_name",
     "tb_complexity.complexity_name"
 ]);
+var_dump($data);
 ?>
 
 
@@ -30,7 +31,7 @@ $data= $database->select("tb_recipes",[
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
     <!--FONT AWESOME-->
@@ -161,23 +162,21 @@ $data= $database->select("tb_recipes",[
                     <!--RECIPE END-->
                     <!--================================-->
                     </tbody>
+                    <?php
+                    $len = count($data);
 
-                                        <?php
+                    for($i=0; $i<$len; $i++){
+                        echo "<th scope='row'><i class='fa-solid fa-utensils me-2'></i>".$data[$i]["recipes_name"]."</th>";
+                        echo "<td>".$data[$i]["category_name"]."</td>";
+                        echo "<td>".$data[$i]["occasion_name"]."</td>";
+                        echo "<td>".$data[$i]["complexity_name"]."</td>";
+                        echo "<td><a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                                                        <a href='_recipes_edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
 
-                                        $len = count($data);
-
-                                        for($i=0; $i<$len; $i++){
-                                            echo "<th scope='row'><i class='fa-solid fa-utensils me-2'></i>".$data[$i]["recipes_name"]."</th>";
-                                            echo "<td>".$data[$i]["category_name"]."</td>";
-                                            echo "<td>".$data[$i]["occasion_name"]."</td>";
-                                            echo "<td>".$data[$i]["complexity_name"]."</td>";
-                                            echo "<td><a href='#?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
-                                                        <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
-                                            echo "</tr>";
-                                        }
-
-                                        ?>
-                                        </tbody>
+                        echo "</tr>";
+                    }
+                    ?>
+                    </tbody>
                 </table>
             </div>
         </div>
