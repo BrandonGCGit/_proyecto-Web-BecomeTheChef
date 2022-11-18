@@ -232,8 +232,9 @@ $data_Occasion = $database->select("tb_occasion", "*");
                                 <div class="container px-0 mt-5">
                                     <label for="recipe_listIngredients" class="form-label">Lista de
                                         Ingredientes</label>
-                                    <textarea class="bg-gray form-control" id="recipe_listIngredients"
-                                              rows="6" name="recipe_listIngredients"></textarea>
+                                    <div id="ingredients">
+                                    </div>
+                                    <button id="add-ingredient">Add Ingredient</button>
                                 </div>
                                 <div class="container px-0 mt-5">
                                     <label for="recipe_listInstructions" class="form-label">Intrucciones de
@@ -269,6 +270,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+<script src="../js/_setIngredients.js"></script>
 </body>
 
 </html>

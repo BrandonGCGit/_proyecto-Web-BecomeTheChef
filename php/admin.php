@@ -22,7 +22,6 @@ $data= $database->select("tb_recipes",[
     "tb_occasion.occasion_name",
     "tb_complexity.complexity_name"
 ]);
-var_dump($data);
 ?>
 
 
