@@ -4,6 +4,7 @@ $data_Category = $database->select("tb_category", "*");
 $data_Complexity = $database->select("tb_complexity", "*");
 $data_Occasion = $database->select("tb_occasion", "*");
 
+var_dump($_POST);
 
 //EDITAR
 //if(isset($_GET)) {
@@ -239,8 +240,9 @@ $data_Occasion = $database->select("tb_occasion", "*");
                                 <div class="container px-0 mt-5">
                                     <label for="recipe_listInstructions" class="form-label">Intrucciones de
                                         preparación</label>
-                                    <textarea class="bg-gray form-control" id="recipe_listInstructions"
-                                              rows="6" name="recipe_listInstructions"></textarea>
+                                    <div id="steps">
+                                    </div>
+                                    <button id="add-step">Add Step</button>
                                 </div>
 
                                 <div class="mt-5 mb-5 pt-3 d-flex justify-content-around">
@@ -271,6 +273,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 <script src="../js/_setIngredients.js"></script>
+<script src="../js/_setPreparationSteps.js"></script>
 </body>
 
 </html>

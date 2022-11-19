@@ -32,6 +32,25 @@ if(isset($_POST)) {
         ]);
     }
 
+    $ingredients = "";
+    foreach ($_POST["ingredients"] as $key => $ingredient){
+        if ($key == array_key_last($_POST["ingredients"])){
+            $ingredients.= $ingredient;
+        }else{
+            $ingredients.= $ingredient.",";
+        }
+    }
+
+
+    $steps = "";
+    foreach ($_POST["steps"] as $key => $step){
+        if ($key == array_key_last($_POST["steps"])){
+            $steps.= $step;
+        }else{
+            $steps.= $step.",";
+        }
+    }
+
     if (strcmp($pageName, "register_recipe") ){
 
 
@@ -75,9 +94,9 @@ if(isset($_POST)) {
 //                    "recipes_description" => "SUPER DESCRIPTIO",
                     "recipes_description" => $_POST["recipe_description"],
 //                    "recipes_list_ingredients" => "Super ingredientes",
-                    "recipes_list_ingredients" => $_POST["recipe_listIngredients"],
+                    "recipes_list_ingredients" => $ingredients,
 //                    "recipes_list_instructions" => "super instructiosn",
-                    "recipes_list_instructions" => $_POST["recipe_listInstructions"],
+                    "recipes_list_instructions" => $steps,
 //                    "category_id" =>  1,
                     "category_id" =>  (int)$_POST["recipe_category"],
 //                    "occasion_id" =>  1,
@@ -103,22 +122,3 @@ if(isset($_POST)) {
 }
 
 ?>
-
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-<?php
-
-
-?>
-</body>
-</html>

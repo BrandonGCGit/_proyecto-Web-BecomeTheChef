@@ -80,7 +80,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
                 <div class="d-flex justify-content-center mt-5">
 
                     <div class="col-8">
-                        <form action="_insert_recipe.php" method="post" enctype="multipart/form-data">
+                        <form action="_recipes_update.php" method="post" enctype="multipart/form-data">
                             <!--////////////////////////////////////-->
                             <!--RECIPE NAME INPUT-->
                             <!--////////////////////////////////////-->
@@ -97,7 +97,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
                             <div class="container px-0 d-flex justify-content-between mt-5 align-items-end">
                                 <div class="col-6 pe-2">
                                     <label for="recipe_img" class="form-label">Imagen</label>
-                                    <input class="bg-gray form-control" id="recipe_img" name="recipe_img" type="file">
+                                    <input class="bg-gray form-control" id="recipe_img" name="recipe_img" type="file" value="<?php echo $data_recipes[0]["recipes_img"];?>">
                                 </div>
 
                                 <div class="col-6 ps-2">
@@ -262,22 +262,50 @@ $data_Occasion = $database->select("tb_occasion", "*");
                             <div class="container px-0 mt-5">
                                 <label for="recipe_listIngredients" class="form-label">Lista de
                                     Ingredientes</label>
-                                <textarea class="bg-gray form-control" id="recipe_listIngredients"
-                                          rows="6" name="recipe_listIngredients">
-                                </textarea>
+
+
+                                <div id="ingredients">
+                                    <?php
+                                $listIngredients = [];
+                                $ingredients = explode(",",$ingredients = $data_recipes[0]["recipes_list_ingredients"] );
+                                foreach ($ingredients as $ingredient) {
+                                    echo "<div>";
+                                    echo "<label>Ingredient</label>";
+                                    echo "<input type = 'text' name='ingredients[]' value='$ingredient'>";
+                                    echo "<button>remove</button>";
+                                    echo "</div>";
+                                }
+                                ?>
+                                </div>
+                                <button id='add-ingredient'>Add Ingredient</button>
                             </div>
                             <div class="container px-0 mt-5">
                                 <label for="recipe_listInstructions" class="form-label">Intrucciones de
                                     preparación</label>
-                                <textarea class="bg-gray form-control" id="recipe_listInstructions"
-                                          rows="6" name="recipe_listInstructions"></textarea>
+
+                                <div id="steps">
+                                    <?php
+                                $listSteps = [];
+                                $steps = explode(",",$steps = $data_recipes[0]["recipes_list_instructions"] );
+                                foreach ($steps as $step) {
+                                    echo "<div>";
+                                    echo "<label>Steps</label>";
+                                    echo "<input type = 'text' name='steps[]' value='$step'>";
+                                    echo "<button>remove</button>";
+                                    echo "</div>";
+                                }
+                                ?>
+                                </div>
+                                <button id='add-step'>Add Step</button>
                             </div>
 
                             <div class="mt-5 mb-5 pt-3 d-flex justify-content-around">
-                                <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="Registrar Receta">
+                                <input type="hidden" name="id" value="<?php echo $data_recipes[0]["recipes_id"]?>">
+                                <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="modificar">
                                 <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="Modificar Receta">
                                 <!-- <input type="submit" value="SUBMIT">-->
                                 <!--<button type="button" class="btn btn-primary btn-lg">Large button</button>-->
+
                             </div>
                             <!--////////////////////////////////////-->
                             <!--DESCRIPTION, INGREDIENTS LIST,PREPARATION INTRUCTIONS-->
@@ -300,6 +328,8 @@ $data_Occasion = $database->select("tb_occasion", "*");
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+<script src="../js/_setIngredients.js"></script>
+<script src="../js/_setPreparationSteps.js"></script>
 </body>
 
 </html>
