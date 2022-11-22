@@ -9,7 +9,7 @@ if(!isset($database)){
         'host' => 'localhost',
         'database' => 'become_the_chef',
         'username' => 'root',
-        'password' => ''
+        'password' => 'Sp^9EfrVA!Z'
     ]);
 }
 

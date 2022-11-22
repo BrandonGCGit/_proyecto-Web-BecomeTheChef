@@ -550,7 +550,7 @@ $data= $database->select("tb_recipes",[
                         echo "<div class='card mt-2'>";
                         echo "<a href=''#'>";
 //                        Img de la receta
-                        echo "<img src='./img/".$img."' class='card-img-top w-100' alt='pancakes'>";
+                        echo "<img src='./img/".$img.".png' class='card-img-top w-100' alt='".$name."'>";
                         echo "</a>";
                         echo "<div class='card-body'>";
                         echo "<div class='d-flex'>";
