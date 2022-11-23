@@ -6,10 +6,10 @@ if(!isset($database)){
     $database = new Medoo([
         // [required]
         'type' => 'mysql',
-        'host' => 'localhost',
+        'host' => 'db4free.net:3306',
         'database' => 'become_the_chef',
-        'username' => 'root',
-        'password' => 'Sp^9EfrVA!Z'
+        'username' => 'admin777',
+        'password' => '32a_6_qZaTDM9qm'
     ]);
 }
 
