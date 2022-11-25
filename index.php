@@ -22,10 +22,15 @@
 
     <!--    CSS-->
     <link rel="stylesheet" href="./main.css">
-</head>
-<body>
 
-<main>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid/6.3.1/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino/dist/buttons.css">
+
+</head>
+<body data-barba="wrapper">
+
+<main data-barba="container" data-barba-namespace="home">
+    
     <!--    =======================-->
     <!--    NAVBAR & IMG TACO-->
     <!--    ======================-->
@@ -761,6 +766,7 @@
     <!--    =================================================-->
     <!--    FOOTER-->
     <!--    =================================================-->
+    
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
