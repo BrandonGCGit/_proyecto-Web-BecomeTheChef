@@ -23,7 +23,7 @@
   <!--  ===============================================================================================================================-->
   <!--  Nombre & SegundoNombre & PrimerApellido & SegundoApellido & Email & Usuario & Contraseña & ConfirmarContrasena & BtnRegistrarse-->
   <!--  ===============================================================================================================================-->
-  <section class="vh-100">
+  <div class="vh-100">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6 text-black">
@@ -39,7 +39,7 @@
           <!--                  ==============================================================================================================-->
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-3 pt-4 pt-xl-0 mt-xl-n5 justify-content-center">
             
-            <form action="insert.php" method="post">
+            <form action="./_insert_user.php" method="post">
               
               <!--                                                    ========================-->
               <!--                                                    Nombre & SegundoNombre-->
@@ -102,7 +102,7 @@
               <!--                                                    ========================================-->
               
               
-              <p class="mb-4">Ya tiene una cuenta? <a href="../login.html" class="link-info">Iniciar Sesion</a></p>
+              <p class="mb-4">Ya tiene una cuenta? <a href="login.php" class="link-info">Iniciar Sesion</a></p>
   
               <p class="text-center fs-6 link-dark">Al unirte, aceptas los <a href="#!" class="link-dark">Términos y Política de privacidad</a></p>
             
@@ -130,7 +130,7 @@
       
       </div>
     </div>
-  </section>
+  </div>
   <!--  ===============================================================================================================================-->
   <!--  Nombre & SegundoNombre & PrimerApellido & SegundoApellido & Email & Usuario & Contraseña & ConfirmarContrasena & BtnRegistrarse-->
   <!--  ===============================================================================================================================-->

@@ -103,3 +103,37 @@
 .mdl-title{
     font-size: var(--fs-mdl);
 }
+
+.link-trans{
+    font-size: var(--fs-xsm);
+    opacity: 100%;
+}
+
+.link-trans:hover{
+    font-size: var(--fs-sm);
+    opacity: 50%;
+}
+.link-trans:hover::after{
+    font-size: var(--fs-xsm);
+    opacity: 100%;
+ }
+
+
+
+ .link-social-media{
+    font-size: var(--fs-xsm);
+    opacity: 100%;
+}
+
+.link-social-media:hover{
+    font-size: var(--fs-rg);
+    opacity: 50%;
+}
+.link-social-media:hover::after{
+    font-size: var(--fs-xsm);
+    opacity: 100%;
+ }
+
+ .txt-terms{
+    color: var(--clr-d-gray);
+ }

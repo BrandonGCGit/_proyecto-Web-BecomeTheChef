@@ -1,8 +1,18 @@
 <?php
 require 'db.php';
 
+//Iniio de ssion
+//session_start();
+//if (isset($_SESSION["isLoggedIn"])){
+////    Aqui va todo lo que se tiene que ejecutar
+//}else{
+////    Si no estan logeados se tiene que redirectionar
+////    header("location: login.php");
+//}
+
+
 $data= $database->select("tb_recipes",[
-        "[>]tb_category"=>["category_id" => "category_id"],
+    "[>]tb_category"=>["category_id" => "category_id"],
     "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
     "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
 ],[
@@ -12,30 +22,6 @@ $data= $database->select("tb_recipes",[
     "tb_occasion.occasion_name",
     "tb_complexity.complexity_name"
 ]);
-
-
-//$dataOccasion= $database->select("tb_occasion",[
-//        "[>]tb_occasion"=>["occasion_id" => "occasion_id"]
-////    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
-////    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
-//],[
-//    "tb_recipes.recipes_id",
-//    "tb_recipes.recipes_name",
-//    "tb_category.category_name",
-////    "tb_occasion.occasion_name",
-////    "tb_complexity.complexity_name"
-//]);
-
-
-//
-//$data= $database->select("tb_recipes",[
-//        "[>]tb_category"=>["category_id" => "category_id"]
-//    ],[
-//        "tb_recipes.recipes_id",
-//        "tb_recipes.recipes_name",
-//        "tb_recipes.recipes_portions",
-//        "tb_category.category_name"
-//    ]);
 ?>
 
 
@@ -91,11 +77,9 @@ $data= $database->select("tb_recipes",[
                             <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
-                    <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                    </a>
-                    <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
+                    <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow"><?php echo $_SESSION["email"] ?></button>
+                    <a href="./logout.php">
+                        <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">logout</button>
                     </a>
                 </div>
             </div>
@@ -127,7 +111,7 @@ $data= $database->select("tb_recipes",[
             <!--            ===========================-->
             <div class="col-md-2">
                 <div class="accordion" id="accordionExample">
-                    <div class="accordion-item border-0">
+                    <div class="accordion-item border-1 bg-light">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <img class="me-2" src="./img/chef-hat.png" alt="">
@@ -138,10 +122,8 @@ $data= $database->select("tb_recipes",[
                             <div class="accordion-body">
                                 <button type="button" class="btn btn-outline-warning text-dark border-0 mb-3">
                                     <img class="me-2" src="./img/todolist.png" alt="">Ver lista</button>
-                                    <a class="no-decorations-link text-decoration-none text-black" href="./register_recipe.php">
-                                        <button type="button" class="btn btn-outline-warning text-dark border-0">
-                                        <img class="me-2" src="./img/editing-recipe.png" alt="">Crear Receta</button>
-                                    </a>
+                                <button id="btn-register_recipe" type="button" class="btn btn-outline-warning text-dark border-0">
+                                    <img class="me-2" src="./img/editing-recipe.png" alt="">Crear Receta</button>
                             </div>
                         </div>
                     </div>
@@ -151,7 +133,7 @@ $data= $database->select("tb_recipes",[
             <!--            Accordion-->
             <!--            ===========================-->
             <div class="col-md-10">
-                <table class="table table-striped">
+                <table class="table table-light table-striped table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Nombre</th>
@@ -162,22 +144,36 @@ $data= $database->select("tb_recipes",[
                     </tr>
                     </thead>
                     <tbody>
-
+                    <!--===============================-->
+                    <!--RECIPE START-->
+                    <!--================================-->
+                    <tr>
+                        <th scope="row"><i class='fa-solid fa-utensils me-2'></i>Arroz con pollo</th>
+                        <td>Breakfast</td>
+                        <td>Navidad</td>
+                        <td>Medio</td>
+                        <td>
+                            <a href="#"><i class='fa-solid fa-trash pe-3'></i></a>
+                            <a href="#"><i class='fa-solid fa-pen-to-square ps-3'></i></a>
+                        </td>
+                    </tr>
+                    <!--===============================-->
+                    <!--RECIPE END-->
+                    <!--================================-->
+                    </tbody>
                     <?php
-
                     $len = count($data);
 
                     for($i=0; $i<$len; $i++){
-                        echo "<tr id='preview-recipes'>";
                         echo "<th scope='row'><i class='fa-solid fa-utensils me-2'></i>".$data[$i]["recipes_name"]."</th>";
                         echo "<td>".$data[$i]["category_name"]."</td>";
                         echo "<td>".$data[$i]["occasion_name"]."</td>";
                         echo "<td>".$data[$i]["complexity_name"]."</td>";
-                        echo "<td><a href='#?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
-                <a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
+                        echo "<td><a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                                                        <a href='_recipes_edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
+
                         echo "</tr>";
                     }
-
                     ?>
                     </tbody>
                 </table>
@@ -194,5 +190,6 @@ $data= $database->select("tb_recipes",[
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="./js/_tippy.js"></script>
+<script src="../js/_buttoms_href.js"></script>
 </body>
 </html>

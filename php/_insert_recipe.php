@@ -4,8 +4,6 @@ $pageName = basename($_SERVER['HTTP_REFERER']);
 
 require 'db.php';
 
-
-
 //https://stackoverflow.com/questions/4356288/php-random-string-generator
 function generateRandomString($length = 9) {
     $characters = '0123456788abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -18,17 +16,40 @@ function generateRandomString($length = 9) {
 }
 
 if(isset($_POST)) {
-    echo $pageName;
-//    if (strcmp($pageName, "register_user") ){
-//        $database->insert("tb_users", [
-//            "name" => $_POST["register_name"],
-//            "second_name" => $_POST["register_secondName"],
-//            "last_name" => $_POST["register_lastName"],
-//            "second_surname" => $_POST["register_secondSurname"],
-//            "email" => $_POST["register_email"],
-//            "password" => $_POST["register_password"]
-//        ]);
-//    }
+    if (!strcmp($pageName, "register_user") ){
+        echo $pageName;
+
+//        COnvierte la password en hash, el cost son las pasadoas que se hacen para hacer mas fuete la pass
+        $pass = password_hash($_POST["register_password"], PASSWORD_DEFAULT,['cost => 12']);
+
+        $database->insert("tb_users", [
+            "name" => $_POST["register_name"],
+            "second_name" => $_POST["register_secondName"],
+            "last_name" => $_POST["register_lastName"],
+            "second_surname" => $_POST["register_secondSurname"],
+            "email" => $_POST["register_email"],
+            "password" => $pass
+        ]);
+    }
+
+    $ingredients = "";
+    foreach ($_POST["ingredients"] as $key => $ingredient){
+        if ($key == array_key_last($_POST["ingredients"])){
+            $ingredients.= $ingredient;
+        }else{
+            $ingredients.= $ingredient.",";
+        }
+    }
+
+
+    $steps = "";
+    foreach ($_POST["steps"] as $key => $step){
+        if ($key == array_key_last($_POST["steps"])){
+            $steps.= $step;
+        }else{
+            $steps.= $step.",";
+        }
+    }
 
     if (strcmp($pageName, "register_recipe") ){
 
@@ -73,9 +94,9 @@ if(isset($_POST)) {
 //                    "recipes_description" => "SUPER DESCRIPTIO",
                     "recipes_description" => $_POST["recipe_description"],
 //                    "recipes_list_ingredients" => "Super ingredientes",
-                    "recipes_list_ingredients" => $_POST["recipe_listIngredients"],
+                    "recipes_list_ingredients" => $ingredients,
 //                    "recipes_list_instructions" => "super instructiosn",
-                    "recipes_list_instructions" => $_POST["recipe_listInstructions"],
+                    "recipes_list_instructions" => $steps,
 //                    "category_id" =>  1,
                     "category_id" =>  (int)$_POST["recipe_category"],
 //                    "occasion_id" =>  1,
@@ -83,10 +104,12 @@ if(isset($_POST)) {
 //                    "complexity_id" => 1,
                     "complexity_id" =>  (int)$_POST["recipe_complexity"],
 //                    "likes_id" => 1,
-                    "likes_id" => $_POST["recipe_likes"],
+//                    "likes_id" => (int)$_POST["recipe_likes"],
 //                    "recipes_img" => "IMG"
                     "recipes_img" => $img
                 ]);
+
+                echo "A punto de insert";
                     header("location: register_recipe.php");
             }
 
@@ -99,22 +122,3 @@ if(isset($_POST)) {
 }
 
 ?>
-
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-   <?php
-
-
-   ?>
-</body>
-</html>

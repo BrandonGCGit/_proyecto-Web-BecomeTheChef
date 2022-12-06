@@ -1,9 +1,31 @@
+<?php
+
+require './php/db.php';
+
+$data= $database->select("tb_recipes",[
+    "[>]tb_category"=>["category_id" => "category_id"],
+    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
+    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
+],[
+    "tb_recipes.recipes_id",
+    "tb_recipes.recipes_name",
+    "tb_recipes.recipes_img",
+    "tb_recipes.recipes_total_time",
+    "tb_recipes.recipes_portions",
+    "tb_category.category_name",
+    "tb_occasion.occasion_name",
+    "tb_complexity.complexity_name"
+]);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
     <!--FONT AWESOME-->
@@ -46,8 +68,8 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
                     <form class="d-flex mt-xxl-5" role="search">
-                        <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
-                        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn border-0" type="submit"></button>
+                        <input class="form-control-lg border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <ul class="navbar-nav mt-xxl-5">
                         <li class="nav-item mx-xl-3">
@@ -60,12 +82,8 @@
                             <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
-                    <a href="./login.html">
-                        <button type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                    </a>
-                    <a href="php/register_user.php">
-                        <button type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
-                    </a>
+                        <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
+                        <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
                 </div>
             </div>
         </nav>
@@ -134,7 +152,7 @@
             <div class="row d-flex text-center m-auto">
 
                 <div class="col-sm-6 m-auto">
-                    <h3 class="ff-lato fw-bold">Las <span class="bg-orange">Mejores</span> 12 Recetas de la semana</h3>
+                    <h3 class="ff-lato fw-bold">The <span class="bg-orange">Best</span> 7 Recipes of the Week</h3>
                 </div>
 
             </div>
@@ -158,7 +176,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -185,7 +203,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="./front-receta.html" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +218,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -227,7 +245,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="./front-receta.html" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +260,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -269,7 +287,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning btn-outline-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +302,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -311,7 +329,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +344,7 @@
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
-                            <a href="#">
+                            <a href="./front-receta.html">
                                 <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
                             </a>
                             <div class="card-body">
@@ -353,7 +371,7 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +409,7 @@
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
-        <h3 class="text-center ff-lato fw-bold"> Our selection for your week</h3>
+        <h3 class="text-center ff-lato fw-bold">Become The <span class="bg-orange">Chef</span></h3>
         <!--=========================-->
         <!--LINE BETWEEN SECTIONS-->
         <!--=========================-->
@@ -441,27 +459,13 @@
                             <div class="accordion-body m-1 p-1 pt-3">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">tres</button>
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Dinner</button>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Amus</button>
-                                        <!--                                        <div class="card-optionsDefault text-center rounded-1">-->
-                                        <!--                                            <div class="card-ciruculeDefault mt-3 pt-3">-->
-                                        <!--                                                <img class="" src="./img/egg.png" alt="image of a egg">-->
-                                        <!--                                            </div>-->
-                                        <!--                                            <p class="text">Desayunos</p>-->
-                                        <!--                                        </div>-->
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Breackfast</button>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Desayunos</button>
-                                        <!--                                        <button type="button" class="btn btn-sm" data-bs-toggle="button">-->
-                                        <!--                                            <div class="text-center rounded-1">-->
-                                        <!--                                                <div class="mt-3 p-3 circule-cardOptions">-->
-                                        <!--                                                    <img class="" src="./img/egg.png" alt="">-->
-                                        <!--                                                </div>-->
-                                        <!--                                                <p class="text-center">desayunos</p>-->
-                                        <!--                                            </div>-->
-                                        <!--                                        </button>-->
+                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="button">Lunch</button>
                                     </div>
                                 </div>
                             </div>
@@ -477,13 +481,13 @@
                             <div class="accordion-body m-2 p-1">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Hard</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Easy</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Medium</button>
                                     </div>
                                 </div>
                             </div>
@@ -499,13 +503,22 @@
                             <div class="accordion-body m-2 p-1">
                                 <div class="row row-cols-xl-auto">
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Christmas</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Holidays</button>
                                     </div>
                                     <div class="col-md-auto">
-                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Desayunos</button>
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">New Year</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">FDF</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">Holidays</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <button type="button" class="btn btn-outline-dark my-1" data-bs-toggle="button">New Year</button>
                                     </div>
                                 </div>
                             </div>
@@ -527,93 +540,59 @@
             <!--            =========================-->
             <div class="col-lg-9 my-3">
                 <div class="row row-cols-md-3">
+
+                    <?php
+                    $len = count($data);
+                    for ($i=0; $i<$len; $i++){
+                        $img = $data[$i]["recipes_img"];
+                        $name =$data[$i]["recipes_name"];
+                        $timeRecipe =$data[$i]["recipes_total_time"];
+                        $recipePortions =$data[$i]["recipes_portions"];
+                        $complexityName =$data[$i]["complexity_name"];
+
+                        echo "<div class = 'col-md-4'>";
+                        echo "<div data-aos='flip-left' data-aos-duration='600'>";
+                        echo "<div class='card mt-2'>";
+                        echo "<a href=''#'>";
+//                        Img de la receta
+                        echo "<img src='./img/".$img.".png' class='card-img-top w-100' alt='".$name."'>";
+                        echo "</a>";
+                        echo "<div class='card-body'>";
+                        echo "<div class='d-flex'>";
+                        echo "<a class='text-decoration-none ff-lato fw-bold' href='#'>";
+//                        Nombre de la receta
+                        echo "<h5 class='card-text-title'>".$name."</h5>";
+                        echo "</a>";
+                        echo "</div>";
+                        echo "<div class='d-flex justify-content-start'>";
+                        echo "<i class='fa-solid fa-clock align-self-center'></i>";
+//                        Tiempo de la receta
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."min</p>";
+                        echo "</div>";
+                        echo "<div class='d-flex justify-content-start'>";
+                        echo "<i class='fa-solid fa-utensils align-self-center'></i>";
+//                        Porciones
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions." Porciones</p>";
+                        echo "</div>";
+                        echo "<div class='d-flex justify-content-start'>";
+                        echo "<i class='fa-solid fa-signal align-self-center'></i>";
+//                        Dificultad
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$complexityName."</p>";
+                        echo "</div>";
+                        echo "<div class='text-end'>";
+                        echo "<a href='#' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+
+                    }
+
+                    ?>
                     <div class="col-md-4">
                         <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2 hvr-curl-top-right">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-                    </div>
-                    <div class="col-md-4">
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-                    </div>
-                    <div class="col-md-4">
-                        <!--===================-->
-                        <!--CARD-->
+                        <!--CARD START-->
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
@@ -644,18 +623,18 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
                         </div>
                         <!--===================-->
-                        <!--CARD-->
+                        <!--CARD END-->
                         <!--===================-->
                     </div>
                     <div class="col-md-4">
                         <!--===================-->
-                        <!--CARD-->
+                        <!--CARD START-->
                         <!--===================-->
                         <div data-aos="flip-left" data-aos-duration='600'>
                             <div class="card mt-2">
@@ -686,16 +665,15 @@
                                 </div>
                                 <!--**********************************************-->
                                 <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-primary text-center">Ver receta</a>
+                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
                                 </div>
                             </div>
                         </div>
                         </div>
                         <!--===================-->
-                        <!--CARD-->
+                        <!--CARD END-->
                         <!--===================-->
                     </div>
-                </div>
             </div>
             <!--            ======================-->
             <!--            ListOfRecipes-->
@@ -713,60 +691,92 @@
 
 
     <!--    =================================================-->
-    <!--    FOOTER-->
+    <!--    FOOTER START-->
     <!--    =================================================-->
+    <footer>
 
-    <div class="container clr-black h-75">
-        <div class="row row-cols-md-4">
-            <div class="col-md-3 border-end border-2 mt-5 text-center border-opacity-25">
-                <img src="./img/brand-white.png" alt="image brand white">
-            </div>
-            <div class="col-md-3 border-end border-2 mt-5 text-center">
-                <div class="row">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> Home</a>
-                </div>
-                <div class="row mt-5">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#"> About Us</a>
-                </div>
-            </div>
-
-            <div class="col-md-3 border-end border-2 mt-5 text-center">
-                <div class="row">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">Síguenos</a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-facebook-f me-3"></i>
-                        Facebook
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-instagram me-3"></i>
-                        Instagram
-                    </a>
-                </div>
-                <div class="row my-3">
-                    <a class="text-white ff-lato fw-bold text-decoration-none fs-4" href="#">
-                        <i class="fa-brands fa-twitter me-3"></i>
-                        Twitter
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 mt-5">
-                <form class="d-flex" role="search">
-                    <button class="btn" type="submit"><img src="./img/icono-lupa-white.png" alt=""></button>
-                    <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent w-100 border-dark opacity-50 border-white text-white" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!--    =================================================-->
-    <!--    FOOTER-->
-    <!--    =================================================-->
+<div class="container-fluid clr-black">
     
+        <!--==============================-->
+                    <div class="col pt-3 pb-3 text-center border-bottom bg-transparent">
+                        <a href="#"><img src="./img/brand-white.png" alt="img-brand-white"></a>
+      
+                    </div>
+    
+    <!--FIN DE LA PRIMERA COLUM-->
+    <!--INICIO DE LA SEGUNDA COLUM-->
+    <div class="row align-items-center">
+    
+         <!--INICIO ROW 02-->            
+                    <div class="col pt-3 text-center">
+                        <!--
+                        <div class="row align-items-start">
+                            <a class="text-white text-decoration-none" href="#">Síguenos</a>
+                        </div>
+                        -->
+                        <div class="d-flex justify-content-center">
+                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                                <a class="text-decoration-none clr-white icon-Facebook" href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                                <a class="text-white text-decoration-none icon-Instagram" href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </div>
+                            
+                                <div class="row my-3 d-flex hvr-bounce-in">
+                                    <a class="text-decoration-none no-decorations-link clr-white icon-Twitter" href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        Twitter
+                                    </a>
+                                
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+
+                </div>
+    <!--FIN DE LA SEGUNDA COLUM-->
+    <!--INICIO DE LA TERCER COLUM-->
+                <div class="row pb-2 pt-3">
+                     
+                     <div class="col d-flex justify-content-center">
+                            <a class="text-white text-decoration-none px-3 hvr-grow-shadow" href="#"> Home</a>
+
+                        <div class="border-start px-3">
+                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> About Us</a>
+                        </div>
+                        <div class="border-start px-3">
+                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> Contact</a>
+                        </div>
+                    </div>
+                </div>
+    <!--FIN DE LA TERCER COLUM-->
+
+                <div class="row pb-4 pt-4 text-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="txt-terms mb-0">Copyright 2022</p>
+                        <p class="txt-terms mt-0">proyecto ITM desarrollo de aplicaciones interactivas_TM4100</p>
+                    </div>
+
+                </div>
+
+</div><!--FIN DEL CONTAINER-->
+          
+
+</footer>
+
+
+
+<!--    =================================================-->
+<!--    FOOTER END-->
+<!--    =================================================-->
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
@@ -782,6 +792,9 @@
 <script>
     AOS.init();
 </script>
+
+<!--_index.js-->
+<script src="js/_buttoms_href.js"></script>
 
 </body>
 </html>
