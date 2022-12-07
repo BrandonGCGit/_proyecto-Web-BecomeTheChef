@@ -1,6 +1,7 @@
 <?php
 
 require './php/db.php';
+$recipes = $database->select("tb_recipes","*");
 
 $data= $database->select("tb_recipes",[
     "[>]tb_category"=>["category_id" => "category_id"],
@@ -543,12 +544,14 @@ $data= $database->select("tb_recipes",[
 
                     <?php
                     $len = count($data);
+                    //$recipes = $database->select("tb_recipes","*");
                     for ($i=0; $i<$len; $i++){
                         $img = $data[$i]["recipes_img"];
                         $name =$data[$i]["recipes_name"];
                         $timeRecipe =$data[$i]["recipes_total_time"];
                         $recipePortions =$data[$i]["recipes_portions"];
                         $complexityName =$data[$i]["complexity_name"];
+                        $recipeid= $data[$i]["recipes_id"];
 
                         echo "<div class = 'col-md-4'>";
                         echo "<div data-aos='flip-left' data-aos-duration='600'>";
@@ -567,12 +570,12 @@ $data= $database->select("tb_recipes",[
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-clock align-self-center'></i>";
 //                        Tiempo de la receta
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."min</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-utensils align-self-center'></i>";
 //                        Porciones
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions." Porciones</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions."</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-signal align-self-center'></i>";
@@ -580,12 +583,13 @@ $data= $database->select("tb_recipes",[
                         echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$complexityName."</p>";
                         echo "</div>";
                         echo "<div class='text-end'>";
-                        echo "<a href='#' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
+                        echo "<a href='front-receta.php?id=".$recipeid."' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
+//                      
 
                     }
 
