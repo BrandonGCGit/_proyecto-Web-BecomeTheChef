@@ -1,6 +1,7 @@
 <?php
 
 require './php/db.php';
+$recipes = $database->select("tb_recipes","*");
 
 $popular_recipes = $database->query("SELECT <recipes_id>,
     <recipes_name>,
@@ -72,10 +73,15 @@ $featured_recipes = $database->select("tb_recipes","*",[
 
     <!--    CSS-->
     <link rel="stylesheet" href="./main.css">
-</head>
-<body>
 
-<main>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid/6.3.1/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/codedgar/Puppertino/dist/buttons.css">
+
+</head>
+<body data-barba="wrapper">
+
+<main data-barba="container" data-barba-namespace="home">
+    
     <!--    =======================-->
     <!--    NAVBAR & IMG TACO-->
     <!--    ======================-->
@@ -397,12 +403,14 @@ $featured_recipes = $database->select("tb_recipes","*",[
 
                     <?php
                     $len = count($data);
+                    //$recipes = $database->select("tb_recipes","*");
                     for ($i=0; $i<$len; $i++){
                         $img = $data[$i]["recipes_img"];
                         $name =$data[$i]["recipes_name"];
                         $timeRecipe =$data[$i]["recipes_total_time"];
                         $recipePortions =$data[$i]["recipes_portions"];
                         $complexityName =$data[$i]["complexity_name"];
+                        $recipeid= $data[$i]["recipes_id"];
 
                         echo "<div class = 'col-md-4'>";
                         echo "<div data-aos='flip-left' data-aos-duration='600'>";
@@ -421,12 +429,12 @@ $featured_recipes = $database->select("tb_recipes","*",[
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-clock align-self-center'></i>";
 //                        Tiempo de la receta
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."min</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-utensils align-self-center'></i>";
 //                        Porciones
-                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions." Porciones</p>";
+                        echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions."</p>";
                         echo "</div>";
                         echo "<div class='d-flex justify-content-start'>";
                         echo "<i class='fa-solid fa-signal align-self-center'></i>";
@@ -434,12 +442,13 @@ $featured_recipes = $database->select("tb_recipes","*",[
                         echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$complexityName."</p>";
                         echo "</div>";
                         echo "<div class='text-end'>";
-                        echo "<a href='#' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
+                        echo "<a href='front-receta.php?id=".$recipeid."' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
+//                      
 
                     }
 

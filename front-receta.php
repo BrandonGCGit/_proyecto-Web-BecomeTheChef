@@ -1,3 +1,22 @@
+<?php 
+
+require './php/db.php';
+//var_dump($_GET);
+
+//EDITAR
+if(isset($_GET)){
+    $data_recipes = $database->select("tb_recipes", "*", [
+        "recipes_id" => $_GET["id"]
+    ]);
+}
+
+//var_dump($data_recipes);
+
+$data_Category = $database->select("tb_category", "*");
+$data_Complexity = $database->select("tb_complexity", "*");
+$data_Occasion = $database->select("tb_occasion", "*");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +49,7 @@
     <!--==========================================-->
     <nav class="navbar navbar-expand-xxl ff-NotoSerif fw-bold">
         <div class="container">
-            <a class="navbar-brand  hvr-float-shadow" href="#"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
+            <a class="navbar-brand  hvr-float-shadow" href="index.php"><img src="./img/brand.png" alt="Brand Become The Chef"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -88,7 +107,7 @@
         <div class="row g-0">
             <!--////////RECIPE TOP IMG///////-->
             <div class="col-md-8">
-                <img src="./img/hamburguesa.jpg" class="img-fluid rounded-start" alt="hamburguesa">
+                <img class="img-fluid rounded-start" <?php echo "<img src='./img/".$data_recipes[0]["recipes_img"].".png"."'>"; ?>>
                 <div class="d-flex justify-content-between mt-3">
                     <div class="d-flex">
                         <div class="p-2 d-flex data-txt-rg">
@@ -127,29 +146,27 @@
                 <!--==========================================-->
                 <div class="align-card-body card-body">
                     <div class="d-flex">
-                        <h5 class="recipe-title card-title">Hamburguesa</h5>
+                        <h5 class="recipe-title card-title"><?php echo $data_recipes[0]["recipes_name"]; ?></h5>
                     </div>
                     <!--**********************************************-->
 
                     <p class="body-recipe-text">
-                        Una hamburguesa es un sándwich hecho a base de carne molida o
-                        de origen vegetal, ​ aglutinada en forma de filete cocinado a
-                        la parrilla o a la plancha, aunque también puede freírse u hornearse.
+                        <?php echo $data_recipes[0]["recipes_description"]?>
                     </p>
                     <!--**********************************************-->
                     <div class="d-flex justify-content-start">
                         <i class="fa-solid fa-clock align-self-center"></i>
-                        <p class="data-text-rg card-text">15 Min</p>
+                        <p class="data-text-rg card-text"><?php echo $data_recipes[0]["recipes_total_time"]?></p>
                     </div>
                     <!--**********************************************-->
                     <div class="d-flex justify-content-start">
                         <i class="fa-solid fa-utensils align-self-center"></i>
-                        <p class="data-text-rg card-text">20 Porciones</p>
+                        <p class="data-text-rg card-text"><?php echo $data_recipes[0]["recipes_portions"]?></p>
                     </div>
                     <!--**********************************************-->
                     <div class="d-flex justify-content-start">
                         <i class="fa-solid fa-signal align-self-center"></i>
-                        <p class="data-text-rg card-text">Fácil</p>
+                        <p class="data-text-rg card-text"><?php echo $data_Complexity[0]["complexity_name"]?></p>
                     </div>
 
 
@@ -252,17 +269,7 @@
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
                  aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
-                    <p class="body-recipe-text">Una hamburguesa es un sándwich hecho a base de carne molida o de
-                        origen vegetal,1​ aglutinada en forma de filete
-                        cocinado a la parrilla o a la plancha, aunque también puede freírse u hornearse. Fuera del
-                        ámbito de habla hispana,
-                        es más común encontrar la denominación estadounidense burger, acortamiento de hamburger. Se
-                        presenta en un pan
-                        ligero partido en dos que posee forma de óvalo. Suele estar acompañada de aros de cebolla,
-                        hojas de lechuga, alguna
-                        rodaja de tomate, láminas de encurtidos y papas fritas. Se suele aliñar con algún
-                        condimento, como puede ser la salsa
-                        de tomate (o kétchup), la mostaza, el relish, o la mayonesa, entre otros.</p>
+                    <p class="body-recipe-text"><?php echo $data_recipes[0]["recipes_description"]?></p>
                 </div>
             </div>
         </div>
@@ -280,150 +287,25 @@
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                  aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
-                    <div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
+                    <lu>
 
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Kg. carne res molida</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
+                    <?php 
+                         $ingredients = [];
+                         $ingredients = explode(",", $data_recipes[0]["recipes_list_ingredients"]);
+                                                
+                            foreach ($ingredients as $key => $ingredient){
+                                if($key != array_key_last($ingredients)){
+                                    /*echo "<div class = 'form-check d-flex'>";
+                                    echo "<input class='form-check-input' type='checkbox'";
+                                    echo "<label class='form-check-label d-flex'></label>";
+                                    echo "<i class='icon-line-height fa-solid fa-utensils mx-1'></i>";*/
+                                    echo "<li class= 'text-ing'>".$ingredient."</li>";
+                                }
+                            }
 
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Cebolla</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
+                    ?>
 
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Huevo</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Ajo</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Perejil</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Sal</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Pimienta</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Salsa de tomate</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Pieza de pan</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-
-                        <div class="form-check d-flex">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label d-flex"></label>
-                            <i class="icon-line-height fa-solid fa-utensils mx-1"></i>
-                            <p class="text-ing">Aceite de oliva</p>
-                        </div>
-                        <!--                            =====================-->
-                        <!--                            Ingrediente-->
-                        <!--                            =====================-->
-                        <!--/////////////////////////////////////////////////////////////////////////-->
-
-                    </div>
+                        </lu>
                 </div>
             </div>
         </div>
@@ -441,108 +323,19 @@
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                  aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 1</h3>
-                        <p class="p-4 body-recipe-text">
-                            Preparamos todos los ingredientes que vamos a necesitar
-                            para elaborar las hamburguesas: 1 kilo de carne picada,
-                            1 cebolla, 1 huevo, 3 dientes de ajo, perejil fresco, sal,
-                            pimienta, salsa de mostaza, 1 pieza de pan duro y aceite de
-                            oliva.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 2</h3>
-                        <p class="p-3 body-recipe-text">
-                            Lo primero que debes hacer para conseguir una hamburguesas
-                            con una textura única es poner el pan duro (puede ser del día anterior)
-                            en remojo: colócalo en un recipiente hondo y cúbrelo de agua natural.
-                            Deja que empape bien.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 3</h3>
-                        <p class="p-3 body-recipe-text">
-                            Mientras se empapa bien el pan comenzamos a picar los ingredientes:
-                            primero la cebolla muy finita y luego lo dientes de ajo, también en
-                            trozos pequeños.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 4</h3>
-                        <p class="p-3 body-recipe-text">
-                            Continuamos picando finamente el perejil fresco. Una vez picados todos
-                            estos ingredientes, los reservamos.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="p-3 division-bottom text-rg-gray">Paso 5</h3>
-                        <p>
-                            Salpimentamos la carne al gusto. Colocamos ésta en un recipiente lo suficientemente
-                            grande para que nos permita trabajar luego cómodamente con ella.Escurrimos el pan
-                            y lo colocamos junto a la carne. Añadimos también el huevo, la cebolla y el ajo, el
-                            perejil y la salsa de mostaza, que dará un sabor singular a este plato.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 6</h3>
-                        <p class="p-3 body-recipe-text">
-                            Ha llegado el momento más divertido: el de mancharnos las manos. Hay que mezclar
-                            bien todos los ingredientes de manera que quede una masa homogénea.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 7</h3>
-                        <p class="p-3 body-recipe-text">
-                            Una vez conseguida esa masa, hay que hacer bolas medianas con la carne, como si se
-                            tratasen
-                            de albóndigas, pero en lugar de dejarlas completamente redondas, achatarlas un poco. Así
-                            conseguiremos la característica forma de las hamburguesas.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 8</h3>
-                        <p class="p-3 body-recipe-text">
-                            En una sartén grande pon aceite a calentar. Cuando esté lo suficientemente caliente,
-                            añade las hamburguesas y fríelas hasta que se doren al gusto.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 9</h3>
-                        <p class="p-3 body-recipe-text">
-                            Una vez estén fritas ve retirándolas del fuego y colócalas en un plato.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <div>
-                        <h3 class="division-bottom text-rg-gray">Paso 10</h3>
-                        <p class="p-3 body-recipe-text">
-                            Puedes tomarlas a la manera habitual: con pan, acompañada de una loncha de queso y
-                            algunas verduras y salsas, o bien de una manera más ligera, sin pan ni acompañamientos,
-                            e incluso, puedes darle un toque gourmet con algún queso manchego, de cabra o incluso
-                            queso azul y un poco de cebolla caramelizada.
-                        </p>
-                    </div>
-                    <!--//////////////////////////////////PASOS PASOS PASOS///////////////////////////////////////-->
-                    <!--  -->
+                        <ul>
+                            <?php 
+                                $directions = [];
+                                $directions = explode(",", $data_recipes[0]["recipes_list_instructions"]);
+                                            
+                                    foreach ($directions as $key => $direction){
+                                        if($key != array_key_last($directions)){
+                                            echo "<li>".$direction."</li>";
+                                        }
+                                    }
+
+                            ?>
+                        </ul>
                 </div>
             </div>
         </div>
