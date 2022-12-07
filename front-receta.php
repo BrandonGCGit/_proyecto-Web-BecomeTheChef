@@ -15,7 +15,26 @@ if(isset($_GET)){
 $data_Category = $database->select("tb_category", "*");
 $data_Complexity = $database->select("tb_complexity", "*");
 $data_Occasion = $database->select("tb_occasion", "*");
+$category_relacionada = $data_Category[0]["category_id"];
+
+
+$recetas_relacionadas = $database->query("SELECT <recipes_id>,
+    <recipes_name>,
+    <recipes_img>,
+    <recipes_total_time>,
+    <recipes_portions>,
+    <category_name>,
+    <occasion_name>,
+    <complexity_name>
+        FROM <tb_recipes> 
+            INNER JOIN <tb_category> ON tb_recipes.category_id = tb_category.category_id
+            INNER JOIN <tb_occasion> ON tb_recipes.occasion_id = tb_occasion.occasion_id
+            INNER JOIN <tb_complexity> ON tb_recipes.complexity_id = tb_complexity.complexity_id
+                                    WHERE <tb_category.category_id> = $category_relacionada 
+                                    ORDER BY <recipes_likes> 
+                                        DESC LIMIT 4")->fetchAll();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,7 +126,7 @@ $data_Occasion = $database->select("tb_occasion", "*");
         <div class="row g-0">
             <!--////////RECIPE TOP IMG///////-->
             <div class="col-md-8">
-                <img class="img-fluid rounded-start" <?php echo "<img src='./img/".$data_recipes[0]["recipes_img"].".png"."'>"; ?>>
+                <img class="img-fluid rounded-start" <?php echo "<img src='./img/".$data_recipes[0]["recipes_img"].".png"."'>"; ?>
                 <div class="d-flex justify-content-between mt-3">
                     <div class="d-flex">
                         <div class="p-2 d-flex data-txt-rg">
@@ -346,187 +365,63 @@ $data_Occasion = $database->select("tb_occasion", "*");
     </div>
 
     <div class="container text-center mb-5">
-        <p class="text-md-yellow">Recetas Relacionada</p>
+        <p class="text-md-yellow">Recetas Relacionadas</p>
 
         <div class="row align-items-start">
             <!--//////////////////////-->
 
-            <div class="col">
-                <!--//////////////////////-->
-                <!--===================-->
-                        <!--CARD START-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2 shadow">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-            </div>
-            <!--//////////////////////-->
+                <?php
+                $len = count($recetas_relacionadas);
+                //$recipes = $database->select("tb_recipes","*");
+                for ($i=0; $i<$len; $i++){
+                    $img = $recetas_relacionadas[$i]["recipes_img"];
+                    $name =$recetas_relacionadas[$i]["recipes_name"];
+                    $timeRecipe =$recetas_relacionadas[$i]["recipes_total_time"];
+                    $recipePortions =$recetas_relacionadas[$i]["recipes_portions"];
+                    $complexityName =$recetas_relacionadas[$i]["complexity_name"];
+                    $recipeid= $recetas_relacionadas[$i]["recipes_id"];
 
-            <div class="col">
-                <!--===================-->
-                        <!--CARD START-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-            </div>
-            <!--//////////////////////-->
+                    echo "<div class = 'col'>";
+                    echo "<div data-aos='flip-left' data-aos-duration='600'>";
+                    echo "<div class='card mt-2'>";
+                    echo "<a href='./front-receta.php?id=".$recipeid."'>";
+//                        Img de la receta
+                    echo "<img src='./img/".$img.".png' class='card-img-top w-100' alt='".$name."'>";
+                    echo "</a>";
+                    echo "<div class='card-body'>";
+                    echo "<div class='d-flex'>";
+                    echo "<a class='text-decoration-none ff-lato fw-bold' href='#'>";
+//                        Nombre de la receta
+                    echo "<h5 class='card-text-title'>".$name."</h5>";
+                    echo "</a>";
+                    echo "</div>";
+                    echo "<div class='d-flex justify-content-start'>";
+                    echo "<i class='fa-solid fa-clock align-self-center'></i>";
+//                        Tiempo de la receta
+                    echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$timeRecipe."</p>";
+                    echo "</div>";
+                    echo "<div class='d-flex justify-content-start'>";
+                    echo "<i class='fa-solid fa-utensils align-self-center'></i>";
+//                        Porciones
+                    echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$recipePortions."</p>";
+                    echo "</div>";
+                    echo "<div class='d-flex justify-content-start'>";
+                    echo "<i class='fa-solid fa-signal align-self-center'></i>";
+//                        Dificultad
+                    echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$complexityName."</p>";
+                    echo "</div>";
+                    echo "<div class='text-end'>";
+                    echo "<a href='front-receta.php?id=".$recipeid."' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+//
 
-            <div class="col">
-                <!--===================-->
-                        <!--CARD START-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-            </div>
-            <!--//////////////////////-->
-            <div class="col">
-                <!--===================-->
-                        <!--CARD START-->
-                        <!--===================-->
-                        <div data-aos="flip-left" data-aos-duration='600'>
-                            <div class="card mt-2">
-                            <a href="#">
-                                <img src="./img/pancake.png" class="card-img-top" alt="pancakes">
-                            </a>
-                            <div class="card-body">
-                                <!--**********************************************-->
-                                <div class="d-flex">
-                                    <a class="text-decoration-none ff-lato fw-bold" href="#">
-                                        <h5 class=" card-text-title">Pancakes</h5>
-                                    </a>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-clock align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">15 Min</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-utensils align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">20 Porciones</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="d-flex justify-content-start">
-                                    <i class="fa-solid fa-signal align-self-center"></i>
-                                    <p class="card-text align-self-center card-text ff-lato ms-2">Fácil</p>
-                                </div>
-                                <!--**********************************************-->
-                                <div class="text-end">
-                                    <a href="#" class="btn bt-orange btn-lg btn-warning text-center">Ver receta</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <!--===================-->
-                        <!--CARD-->
-                        <!--===================-->
-            </div>
-            <!--//////////////////////-->
+                }
 
+                ?>
         </div>
 
 
