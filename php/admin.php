@@ -2,26 +2,28 @@
 require 'db.php';
 
 //Iniio de ssion
-//session_start();
-//if (isset($_SESSION["isLoggedIn"])){
-////    Aqui va todo lo que se tiene que ejecutar
-//}else{
-////    Si no estan logeados se tiene que redirectionar
-////    header("location: login.php");
-//}
+session_start();
+if (isset($_SESSION["isLoggedIn"])){
+    //    Aqui va todo lo que se tiene que ejecutar
+    $data= $database->select("tb_recipes",[
+        "[>]tb_category"=>["category_id" => "category_id"],
+        "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
+        "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
+    ],[
+        "tb_recipes.recipes_id",
+        "tb_recipes.recipes_name",
+        "tb_category.category_name",
+        "tb_occasion.occasion_name",
+        "tb_complexity.complexity_name"
+    ]);
+
+}else{
+    //    Si no estan logeados se tiene que redirectionar
+    header("location: login.php");
+}
 
 
-$data= $database->select("tb_recipes",[
-    "[>]tb_category"=>["category_id" => "category_id"],
-    "[>]tb_occasion"=>["occasion_id" => "occasion_id"],
-    "[>]tb_complexity"=>["complexity_id" => "complexity_id"],
-],[
-    "tb_recipes.recipes_id",
-    "tb_recipes.recipes_name",
-    "tb_category.category_name",
-    "tb_occasion.occasion_name",
-    "tb_complexity.complexity_name"
-]);
+
 ?>
 
 
@@ -61,22 +63,7 @@ $data= $database->select("tb_recipes",[
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-xxl-around" id="navbarSupportedContent">
-                    <form class="d-flex mt-xxl-5" role="search">
-                        <button class="btn border-0" type="submit"><img src="./img/icons8-búsqueda-30%201.png" alt=""></button>
-                        <input class="form-control-lg ms-2 border-0 border-bottom br-0 bg-transparent border-dark opacity-50" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                    <ul class="navbar-nav mt-xxl-5">
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="index.php">Inicio</a>
-                        </li>
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item mx-xl-3">
-                            <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow"><?php echo $_SESSION["email"] ?></button>
                     <a href="./logout.php">
                         <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">logout</button>
@@ -105,34 +92,26 @@ $data= $database->select("tb_recipes",[
 
 
     <div class="container">
-        <div class="row row-cols-2">
+        <div class="row row-cols-1 mb-3">
             <!--            ===========================-->
             <!--            Accordion-->
             <!--            ===========================-->
-            <div class="col-md-2">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item border-1 bg-light">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <img class="me-2" src="./img/chef-hat.png" alt="">
-                                Recetas
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <button type="button" class="btn btn-outline-warning text-dark border-0 mb-3">
-                                    <img class="me-2" src="./img/todolist.png" alt="">Ver lista</button>
-                                <button id="btn-register_recipe" type="button" class="btn btn-outline-warning text-dark border-0">
-                                    <img class="me-2" src="./img/editing-recipe.png" alt="">Crear Receta</button>
-                            </div>
-                        </div>
+            <div class="col-md">
+                <div class="row row-cols">
+                    <div class="col-md d-flex justify-content-end">
+                        <a href="./register_recipe.php">
+                            <img src="../img/plus-icon.png" alt="plus-icon">
+                        </a>
                     </div>
                 </div>
             </div>
             <!--            ===========================-->
             <!--            Accordion-->
             <!--            ===========================-->
-            <div class="col-md-10">
+        </div>
+        <div class="row row-cols-1">
+
+            <div class="col-md">
                 <table class="table table-light table-striped table-hover">
                     <thead>
                     <tr>
@@ -169,7 +148,7 @@ $data= $database->select("tb_recipes",[
                         echo "<td>".$data[$i]["category_name"]."</td>";
                         echo "<td>".$data[$i]["occasion_name"]."</td>";
                         echo "<td>".$data[$i]["complexity_name"]."</td>";
-                        echo "<td><a href='./php/register_recipe.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
+                        echo "<td><a href='./_delete.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-trash pe-3'></i></a>
                                                         <a href='_recipes_edit.php?id=".$data[$i]["recipes_id"]."'><i class='fa-solid fa-pen-to-square ps-3'></i></a></td>";
 
                         echo "</tr>";

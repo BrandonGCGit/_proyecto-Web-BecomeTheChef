@@ -2,7 +2,7 @@
 require 'db.php';
 
 if($_POST){
-//    var_dump($_POST);
+    var_dump($_POST);
 
     $email = $database -> select ("tb_users", "*",[
         "email" => $_POST["email"]
@@ -14,10 +14,11 @@ if($_POST){
             echo "valid email and pass";
 
             session_start();
-            $_SESSION["isLoggenIn"] = true;
+            $_SESSION["isLoggedIn"] = true;
             $_SESSION["email"] = $email[0]["email"];
+            var_dump($_SESSION);
             header("location: ./admin.php");
-            echo "Para admin";
+//            echo "Para admin";
         }else{
             echo "wrong email or password";
         }
