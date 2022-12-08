@@ -74,6 +74,12 @@ body{
     border-top: none;
 }
 
+.like-btn{
+    list-style: none;
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
 .no-decorations-link{
     list-style: none;
 }

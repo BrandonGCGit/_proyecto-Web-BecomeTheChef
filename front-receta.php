@@ -130,13 +130,10 @@ $recetas_relacionadas = $database->query("SELECT <recipes_id>,
                 <div class="d-flex justify-content-between mt-3">
                     <div class="d-flex">
                         <div class="p-2 d-flex data-txt-rg">
-                            <i class="icon-line-height fa-solid fa-thumbs-up"></i>
-                            <p class="px-2">1580</p>
+                            <a type="button" href="./php/likes.php?id=<?php echo $data_recipes[0]["recipes_id"];?>" class="like-btn icon-line-height fa-solid fa-thumbs-up"></a>
+                            <p class="px-2"><?php echo $data_recipes[0]["recipes_likes"]?></p>
                         </div>
-                        <div class="p-2 d-flex data-txt-rg">
-                            <i class="icon-line-height fa-solid fa-thumbs-down"></i>
-                            <p class="px-2">400</p>
-                        </div>
+                        
                     </div>
 
                     <div class="d-flex">
