@@ -54,7 +54,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Become The Chef</title>
     <!--FONT AWESOME-->
@@ -66,9 +66,9 @@ $featured_recipes = $database->select("tb_recipes","*",[
     <!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 
-<!--    SPLIDE-->
+    <!--    SPLIDE-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
-<!--    AOS ANIMATION-->
+    <!--    AOS ANIMATION-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--    CSS-->
@@ -81,7 +81,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
 <body data-barba="wrapper">
 
 <main data-barba="container" data-barba-namespace="home">
-    
+
     <!--    =======================-->
     <!--    NAVBAR & IMG TACO-->
     <!--    ======================-->
@@ -111,8 +111,8 @@ $featured_recipes = $database->select("tb_recipes","*",[
                             <a class="nav-link ff-lato fs-5 hvr-float-shadow" aria-current="page" href="#">Contáctanos</a>
                         </li>
                     </ul>
-                        <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
-                        <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
+                    <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
+                    <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">Registrarse</button>
                 </div>
             </div>
         </nav>
@@ -324,67 +324,86 @@ $featured_recipes = $database->select("tb_recipes","*",[
                 <!--    ACCORDION-->
                 <!--    ===================================================-->
                 <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                            <button class="accordion-button ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Categoría
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body m-1 p-1 pt-3">
-                                <div class="row row-cols-xl-auto">
+                    <form action="./search.php" method="get" role="search">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Categoría
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body m-1 p-1 pt-3">
+                                    <div class="row row-cols-xl-auto">
 
-                                    <?php
-                                    foreach ($categorys as $category){
-                                        echo "<div class='col-md-4'>";
-                                        echo "<button type='button' class='btn btn-outline-dark' data-bs-toggle='button'>".$category['category_name'];"</button>";
-                                        echo "</div>";
-                                    }
-                                    ?>
+                                        <?php
+                                        foreach ($categorys as $category){
+                                            echo "<div class='form-check'>";
+                                            echo "<div class='col-md-4 p-2'>";
+                                            echo "<input class='form-check-input' type='checkbox' value='".$category['category_id']."' id='".$category['category_name']."' name='categories[]'>";
+                                            echo "<label class='form-check-label nav-text' for='".$category['category_name']."'>".$category['category_name']."</label>";
+                                            echo "</input>";
+                                            echo "</div>";
+                                            echo "</div>";
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                            <button class="accordion-button collapsed ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                Complejidad
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                            <div class="accordion-body m-2 p-1">
-                                <div class="row row-cols-xl-auto">
-                                    <?php
-                                    foreach ($complexitys as $complexity){
-                                        echo "<div class='col-md-4'>";
-                                        echo "<button type='button' class='btn btn-outline-dark' data-bs-toggle='button'>".$complexity['complexity_name'];"</button>";
-                                        echo "</div>";
-                                    }
-                                    ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    Complejidad
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body m-2 p-1">
+                                    <div class="row row-cols-xl-auto">
+                                        <?php
+                                        foreach ($complexitys as $complexity){
+                                            echo "<div class='form-check'>";
+                                            echo "<div class='col-md-4 p-2'>";
+                                            echo "<input class='form-check-input' type='checkbox' value='".$complexity['complexity_id']."' id='".$complexity['complexity_name']."' name='levels[]'>";
+                                            echo "<label class='form-check-label nav-text' for='".$complexity['complexity_name']."'>".$complexity['complexity_name']."</label>";
+//                                        echo "<button type='checkbox' class='btn btn-outline-dark' data-bs-toggle='button'>".$complexity['complexity_name'];"</button>";
+//                                            echo "<button type='checkbox' class='btn btn-outline-dark' data-bs-toggle='button' value='".$complexity['complexity_id']."' id='".$complexity['complexity_name']."' name='complexity[]'>".$complexity['complexity_name'];"</button>";
+                                            echo "</input>";
+                                            echo "</div>";
+                                            echo "</div>";
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                            <button class="accordion-button collapsed ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Ocasiones
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                            <div class="accordion-body m-2 p-1">
-                                <div class="row row-cols-xl-auto">
-                                    <?php
-                                    foreach ($occasions as $occasion){
-                                        echo "<div class='col-md-4'>";
-                                        echo "<button type='button' class='btn btn-outline-dark' data-bs-toggle='button'>".$occasion['occasion_name'];"</button>";
-                                        echo "</div>";
-                                    }
-                                    ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed ff-lato fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    Ocasiones
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body m-2 p-1">
+                                    <div class="row row-cols-xl-auto">
+                                        <?php
+                                        foreach ($occasions as $occasion){
+                                            echo "<div class='form-check'>";
+                                            echo "<div class='col-md-4 p-2'>";
+                                            echo "<input class='form-check-input' type='checkbox' value='".$occasion['occasion_id']."' id='".$occasion['occasion_name']."' name='occasion[]'>";
+                                            echo "<label class='form-check-label nav-text' for='".$occasion['occasion_name']."'>".$occasion['occasion_name']."</label>";
+                                            echo "</input>";
+                                            echo "</div>";
+                                            echo "</div>";
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button id="" type="submit" class="btn btn-outline-warning btn-lg   bt-orange ff-lato fs-5">Filtrar</button>
+                        </div>
+                    </form>
                 </div>
                 <!--    ===================================================-->
                 <!--    ACCORDION-->
@@ -454,11 +473,11 @@ $featured_recipes = $database->select("tb_recipes","*",[
                     }
 
                     ?>
+                </div>
+                <!--            ======================-->
+                <!--            ListOfRecipes-->
+                <!--            =========================-->
             </div>
-            <!--            ======================-->
-            <!--            ListOfRecipes-->
-            <!--            =========================-->
-        </div>
     </section>
     <!--    ==================================================-->
     <!--    filters & search & acordeon & listofrecipes-->
@@ -475,88 +494,88 @@ $featured_recipes = $database->select("tb_recipes","*",[
     <!--    =================================================-->
     <footer>
 
-<div class="container-fluid clr-black">
-    
-        <!--==============================-->
-                    <div class="col pt-3 pb-3 text-center border-bottom bg-transparent">
-                        <a href="#"><img src="./img/brand-white.png" alt="img-brand-white"></a>
-      
+        <div class="container-fluid clr-black">
+
+            <!--==============================-->
+            <div class="col pt-3 pb-3 text-center border-bottom bg-transparent">
+                <a href="#"><img src="./img/brand-white.png" alt="img-brand-white"></a>
+
+            </div>
+
+            <!--FIN DE LA PRIMERA COLUM-->
+            <!--INICIO DE LA SEGUNDA COLUM-->
+            <div class="row align-items-center">
+
+                <!--INICIO ROW 02-->
+                <div class="col pt-3 text-center">
+                    <!--
+                    <div class="row align-items-start">
+                        <a class="text-white text-decoration-none" href="#">Síguenos</a>
                     </div>
-    
-    <!--FIN DE LA PRIMERA COLUM-->
-    <!--INICIO DE LA SEGUNDA COLUM-->
-    <div class="row align-items-center">
-    
-         <!--INICIO ROW 02-->            
-                    <div class="col pt-3 text-center">
-                        <!--
-                        <div class="row align-items-start">
-                            <a class="text-white text-decoration-none" href="#">Síguenos</a>
+                    -->
+                    <div class="d-flex justify-content-center">
+                        <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                            <a class="text-decoration-none clr-white icon-Facebook" href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Facebook
+                            </a>
                         </div>
-                        -->
-                        <div class="d-flex justify-content-center">
-                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
-                                <a class="text-decoration-none clr-white icon-Facebook" href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                    Facebook
-                                </a>
-                            </div>
-                            <div class="row my-3 d-flex me-5 hvr-bounce-in">
-                                <a class="text-white text-decoration-none icon-Instagram" href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    Instagram
-                                </a>
-                            </div>
-                            
-                                <div class="row my-3 d-flex hvr-bounce-in">
-                                    <a class="text-decoration-none no-decorations-link clr-white icon-Twitter" href="#">
-                                        <i class="fa-brands fa-twitter"></i>
-                                        Twitter
-                                    </a>
-                                
-                                </div>
-                            
+                        <div class="row my-3 d-flex me-5 hvr-bounce-in">
+                            <a class="text-white text-decoration-none icon-Instagram" href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
                         </div>
 
+                        <div class="row my-3 d-flex hvr-bounce-in">
+                            <a class="text-decoration-none no-decorations-link clr-white icon-Twitter" href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                                Twitter
+                            </a>
+
+                        </div>
 
                     </div>
 
-                </div>
-    <!--FIN DE LA SEGUNDA COLUM-->
-    <!--INICIO DE LA TERCER COLUM-->
-                <div class="row pb-2 pt-3">
-                     
-                     <div class="col d-flex justify-content-center">
-                            <a class="text-white text-decoration-none px-3 hvr-grow-shadow" href="#"> Home</a>
-
-                        <div class="border-start px-3">
-                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> About Us</a>
-                        </div>
-                        <div class="border-start px-3">
-                            <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> Contact</a>
-                        </div>
-                    </div>
-                </div>
-    <!--FIN DE LA TERCER COLUM-->
-
-                <div class="row pb-4 pt-4 text-center">
-                    <div class="d-flex flex-column justify-content-center">
-                        <p class="txt-terms mb-0">Copyright 2022</p>
-                        <p class="txt-terms mt-0">proyecto ITM desarrollo de aplicaciones interactivas_TM4100</p>
-                    </div>
 
                 </div>
 
-</div><!--FIN DEL CONTAINER-->
-          
+            </div>
+            <!--FIN DE LA SEGUNDA COLUM-->
+            <!--INICIO DE LA TERCER COLUM-->
+            <div class="row pb-2 pt-3">
 
-</footer>
+                <div class="col d-flex justify-content-center">
+                    <a class="text-white text-decoration-none px-3 hvr-grow-shadow" href="#"> Home</a>
+
+                    <div class="border-start px-3">
+                        <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> About Us</a>
+                    </div>
+                    <div class="border-start px-3">
+                        <a class="text-white text-decoration-none hvr-grow-shadow" href="#"> Contact</a>
+                    </div>
+                </div>
+            </div>
+            <!--FIN DE LA TERCER COLUM-->
+
+            <div class="row pb-4 pt-4 text-center">
+                <div class="d-flex flex-column justify-content-center">
+                    <p class="txt-terms mb-0">Copyright 2022</p>
+                    <p class="txt-terms mt-0">proyecto ITM desarrollo de aplicaciones interactivas_TM4100</p>
+                </div>
+
+            </div>
+
+        </div><!--FIN DEL CONTAINER-->
+
+
+    </footer>
 
 
 
-<!--    =================================================-->
-<!--    FOOTER END-->
-<!--    =================================================-->
+    <!--    =================================================-->
+    <!--    FOOTER END-->
+    <!--    =================================================-->
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 

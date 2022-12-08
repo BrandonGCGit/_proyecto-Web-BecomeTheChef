@@ -24,6 +24,27 @@ $data= $database->select("tb_recipes",[
 //All recipes
 //===============================================
 
+//===============================================
+//POPULAR RECIPES
+//===============================================
+$popular_recipes = $database->query("SELECT <recipes_id>,
+    <recipes_name>,
+    <recipes_img>,
+    <recipes_total_time>,
+    <recipes_portions>,
+    <category_name>,
+    <occasion_name>,
+    <complexity_name>
+        FROM <tb_recipes> 
+            INNER JOIN <tb_category> ON tb_recipes.category_id = tb_category.category_id
+            INNER JOIN <tb_occasion> ON tb_recipes.occasion_id = tb_occasion.occasion_id
+            INNER JOIN <tb_complexity> ON tb_recipes.complexity_id = tb_complexity.complexity_id
+                                    ORDER BY <recipes_likes> 
+                                        DESC LIMIT 7")->fetchAll();
+//===============================================
+//POPULAR RECIPES
+//===============================================
+
 
 if($_GET){
 //    var_dump($_GET);
