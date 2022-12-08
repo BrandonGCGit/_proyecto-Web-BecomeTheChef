@@ -112,9 +112,9 @@ $data_Occasion = $database->select("tb_occasion", "*");
                     <div class="d-flex">
                         <div class="p-2 d-flex data-txt-rg">
                             <a type="button" href="./php/likes.php?id=<?php echo $data_recipes[0]["recipes_id"];?>" class="like-btn icon-line-height fa-solid fa-thumbs-up"></a>
-                            
                             <p class="px-2"><?php echo $data_recipes[0]["recipes_likes"]?></p>
                         </div>
+                        
                     </div>
 
                     <div class="d-flex">
