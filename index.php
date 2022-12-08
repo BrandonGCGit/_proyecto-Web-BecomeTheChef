@@ -330,7 +330,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
                                 Categoría
                             </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body m-1 p-1 pt-3">
                                 <div class="row row-cols-xl-auto">
 
