@@ -436,8 +436,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
                         echo "<div data-aos='flip-left' data-aos-duration='600'>";
                         echo "<div class='card mt-2'>";
                         echo "<a href='./front-receta.php?id=".$recipeid."'>";
-//                        Img de la receta
-                        echo "<img src='./img/".$img.".png' class='card-img-top w-100' alt='".$name."'>";
+                        echo "<img src='./img/".$img.".png' class='card-img-top' alt='$name'>";
                         echo "</a>";
                         echo "<div class='card-body'>";
                         echo "<div class='d-flex'>";
