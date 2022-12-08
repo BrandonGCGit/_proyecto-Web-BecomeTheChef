@@ -530,9 +530,8 @@ $featured_recipes = $database->select("tb_recipes","*",[
                         echo "<div class = 'col-md-4'>";
                         echo "<div data-aos='flip-left' data-aos-duration='600'>";
                         echo "<div class='card mt-2'>";
-                        echo "<a href=''#'>";
-                        //                        Img de la receta
-                        echo "<img src='./img/".$img.".png' class='card-img-top w-100' alt='".$name."'>";
+                        echo "<a href='./front-receta.php?id=".$recipeid."'>";
+                        echo "<img src='./img/".$img.".png' class='card-img-top' alt='$name'>";
                         echo "</a>";
                         echo "<div class='card-body'>";
                         echo "<div class='d-flex'>";
@@ -557,7 +556,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
                         echo "<p class='card-text align-self-center card-text ff-lato ms-2'>".$complexityName."</p>";
                         echo "</div>";
                         echo "<div class='text-end'>";
-                        echo "<a href='#' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
+                        echo "<a href='front-receta.php?id=".$recipeid."' class='btn bt-orange btn-lg btn-warning text-center'>Ver receta</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
