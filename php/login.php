@@ -1,8 +1,9 @@
 <?php
 require 'db.php';
-
+   $resultado = "";
 if($_POST){
-    var_dump($_POST);
+//    var_dump($_POST);
+
 
     $email = $database -> select ("tb_users", "*",[
         "email" => $_POST["email"]
@@ -11,7 +12,7 @@ if($_POST){
     if(count($email) > 0){
 
         if (password_verify($_POST["password"], $email[0]["password"])){
-            echo "valid email and pass";
+//            echo "valid email and pass";
 
             session_start();
             $_SESSION["isLoggedIn"] = true;
@@ -20,11 +21,11 @@ if($_POST){
             header("location: ./admin.php");
 //            echo "Para admin";
         }else{
-            echo "wrong email or password";
+            $resultado = "wrong email or password";
         }
 
     }else{
-        echo "Wrong user name or passowrd";
+        $resultado = "Wrong email or password";
     }
 
 }
@@ -100,7 +101,13 @@ if($_POST){
                                 <input type="password" id="form2Example28" class="form-control form-control-lg" name="password"/>
                                 <label class="form-label" for="form2Example28">Contraseña</label>
                             </div>
-
+                            <div>
+                                <?php
+                                if ($resultado != ""){
+                                    echo "<h4 class='ff-lato title-mdl text-danger alert-danger'>$resultado<h4>";
+                                }
+                                ?>
+                            </div>
                             <div class="pt-1 mb-4">
                                 <button id="btn-login-admin" type="submit" class="btn btn-outline-dark mt-xxl-5  ff-lato fs-5 hvr-grow-shadow">Iniciar Sesión</button>
                             </div>
