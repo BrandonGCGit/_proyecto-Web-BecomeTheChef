@@ -389,7 +389,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
                                         foreach ($occasions as $occasion){
                                             echo "<div class='form-check'>";
                                             echo "<div class='col-md-4 p-2'>";
-                                            echo "<input class='form-check-input' type='checkbox' value='".$occasion['occasion_id']."' id='".$occasion['occasion_name']."' name='occasion[]'>";
+                                            echo "<input class='form-check-input' type='checkbox' value='".$occasion['occasion_id']."' id='".$occasion['occasion_name']."' name='occasions[]'>";
                                             echo "<label class='form-check-label nav-text' for='".$occasion['occasion_name']."'>".$occasion['occasion_name']."</label>";
                                             echo "</input>";
                                             echo "</div>";

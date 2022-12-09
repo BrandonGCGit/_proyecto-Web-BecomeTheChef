@@ -125,7 +125,7 @@ $recetas_relacionadas = $database->query("SELECT <recipes_id>,
         <div class="row g-0">
             <!--////////RECIPE TOP IMG///////-->
             <div class="col-md-8">
-                <img class="img-fluid rounded-start" <?php echo "<img src='./img/".$data_recipes[0]["recipes_img"].".png"."' alt='".$data_recipes[0]["recipes_name"].'"; ?>>
+                <img class="img-fluid rounded-start" <?php echo "<img src='./img/".$data_recipes[0]["recipes_img"].".png"."' alt='".$data_recipes[0]["recipes_name"]."'"; ?>>
                 <div class="d-flex justify-content-between mt-3">
                     <div class="d-flex">
                         <div class="p-2 d-flex data-txt-rg">

@@ -53,7 +53,7 @@ if($_GET){
 //    var_dump($_GET);
     $selected_levels = [1,2,3];
     $selected_categories = [1,2,3,4,5,6];
-    $selected_ocassions = [1,2,3,4,5,6];
+    $selected_occasions = [1,2,3,4,5,6];
     $has_filter = false;
     $results_message = "";
 //
@@ -67,8 +67,8 @@ if($_GET){
         $has_filter = true;
     }
 
-    if(isset($_GET["ocassions"]) && count($_GET["ocassions"]) > 0){
-        $selected_ocassions = $_GET["ocassions"];
+    if(isset($_GET["occasions"]) && count($_GET["occasions"]) > 0){
+        $selected_occasions = $_GET["occasions"];
         $has_filter = true;
     }
 
@@ -93,7 +93,7 @@ if($_GET){
             ,[
               "tb_recipes.complexity_id" => $selected_levels,
             "tb_recipes.category_id" => $selected_categories,
-            "tb_recipes.occasion_id" => $selected_ocassions
+            "tb_recipes.occasion_id" => $selected_occasions
             ]
         );
         $results_message = "selected recipes";
@@ -484,7 +484,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
                                         foreach ($occasions as $occasion){
                                             echo "<div class='form-check'>";
                                             echo "<div class='col-md-4 p-2'>";
-                                            echo "<input class='form-check-input' type='checkbox' value='".$occasion['occasion_id']."' id='".$occasion['occasion_name']."' name='occasion[]'>";
+                                            echo "<input class='form-check-input' type='checkbox' value='".$occasion['occasion_id']."' id='".$occasion['occasion_name']."' name='occasions[]'>";
                                             echo "<label class='form-check-label nav-text' for='".$occasion['occasion_name']."'>".$occasion['occasion_name']."</label>";
                                             echo "</input>";
                                             echo "</div>";
