@@ -64,7 +64,9 @@ if (isset($_SESSION["isLoggedIn"])){
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow"><?php echo $_SESSION["email"] ?></button>
+                    <a href="../miCuenta.html">
+                        <button id="btn-login" type="button" class="btn btn-outline-dark mt-xxl-5 mx-xxl-4 ff-lato fs-5 hvr-grow-shadow"><?php echo $_SESSION["email"] ?></button>
+                    </a>
                     <a href="./logout.php">
                         <button id="btn-register" type="button" class="btn btn-outline-warning btn-lg   bt-orange mt-xxl-5 ff-lato fs-5 hvr-grow-shadow">logout</button>
                     </a>

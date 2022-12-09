@@ -254,7 +254,6 @@ if (isset($_SESSION["isLoggedIn"])){
 
                                 <div class="mt-5 mb-5 pt-3 d-flex justify-content-around">
                                     <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="Registrar Receta">
-                                    <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="Modificar Receta">
                                     <!-- <input type="submit" value="SUBMIT">-->
                                     <!--<button type="button" class="btn btn-primary btn-lg">Large button</button>-->
                                 </div>
