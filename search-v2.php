@@ -408,7 +408,7 @@ $featured_recipes = $database->select("tb_recipes","*",[
 </script>
 
 <!--_index.js-->
-<script src="js/_buttoms_href.js"></script>
+<script src="js/_index_buttoms_href.js"></script>
 
 </body>
 </html>

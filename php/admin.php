@@ -169,6 +169,5 @@ if (isset($_SESSION["isLoggedIn"])){
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="./js/_tippy.js"></script>
-<script src="../js/_buttoms_href.js"></script>
 </body>
 </html>
