@@ -1,8 +1,16 @@
 <?php
 require 'db.php';
-$data_Category = $database->select("tb_category", "*");
-$data_Complexity = $database->select("tb_complexity", "*");
-$data_Occasion = $database->select("tb_occasion", "*");
+
+session_start();
+if (isset($_SESSION["isLoggedIn"])){
+    $data_Category = $database->select("tb_category", "*");
+    $data_Complexity = $database->select("tb_complexity", "*");
+    $data_Occasion = $database->select("tb_occasion", "*");
+}else{
+    //    Si no estan logeados se tiene que redirectionar
+    header("location: login.php");
+}
+
 
 
 //EDITAR

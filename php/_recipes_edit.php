@@ -1,23 +1,30 @@
 <?php
 require 'db.php';
 
-//EDITAR
-if(isset($_GET)){
-    $data_recipes = $database->select("tb_recipes", "*", [
-        "recipes_id" => $_GET["id"]
-    ]);
-}
 
-
-$data_Category = $database->select("tb_category", "*");
-$data_Complexity = $database->select("tb_complexity", "*");
-$data_Occasion = $database->select("tb_occasion", "*");
 
 //if(isset($_GET)){
 //    $data = $database->select("tb_recipe", "*", [
 //        "id_recipe" => $_GET["id"]
 //    ]);
 //}
+
+
+if (isset($_SESSION["isLoggedIn"])){
+//EDITAR
+    if(isset($_GET)){
+        $data_recipes = $database->select("tb_recipes", "*", [
+            "recipes_id" => $_GET["id"]
+        ]);
+    }
+
+
+    $data_Category = $database->select("tb_category", "*");
+    $data_Complexity = $database->select("tb_complexity", "*");
+    $data_Occasion = $database->select("tb_occasion", "*");
+}else{
+    header("location: login.php");
+}
 ?>
 
 
@@ -301,7 +308,6 @@ $data_Occasion = $database->select("tb_occasion", "*");
 
                             <div class="mt-5 mb-5 pt-3 d-flex justify-content-around">
                                 <input type="hidden" name="id" value="<?php echo $data_recipes[0]["recipes_id"]?>">
-                                <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="modificar">
                                 <input class="btn-bottom-constume btn btn-primary btn-lg bt-orange" type="submit" value="Modificar Receta">
                                 <!-- <input type="submit" value="SUBMIT">-->
                                 <!--<button type="button" class="btn btn-primary btn-lg">Large button</button>-->
