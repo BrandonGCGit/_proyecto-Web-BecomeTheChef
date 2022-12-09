@@ -237,9 +237,9 @@ $recetas_relacionadas = $database->query("SELECT <recipes_id>,
     <div class="container-sm">
         <div class="row-cols-1">
             <div class="line-img col d-flex">
-                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
-                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
-                <a href="#"><img src="./img/filterb.png" class="m-2" alt="filter"></a>
+                <i class="txt-filters me-4 filters-bg p-3"><?php echo $data_Category[0]["category_name"]?></i>
+                <i class="txt-filters me-4 filters-bg p-3"><?php echo $data_Occasion[0]["occasion_name"]?></i>
+                <i class="txt-filters me-4 filters-bg p-3"><?php echo $data_Complexity[0]["complexity_name"]?></i>
             </div>
         </div>
     </div>
@@ -310,11 +310,12 @@ $recetas_relacionadas = $database->query("SELECT <recipes_id>,
                                                 
                             foreach ($ingredients as $key => $ingredient){
                                 if($key != array_key_last($ingredients)){
-                                    /*echo "<div class = 'form-check d-flex'>";
+                                    echo "<div class = 'form-check d-flex'>";
                                     echo "<input class='form-check-input' type='checkbox'";
                                     echo "<label class='form-check-label d-flex'></label>";
-                                    echo "<i class='icon-line-height fa-solid fa-utensils mx-1'></i>";*/
-                                    echo "<li class= 'text-ing'>".$ingredient."</li>";
+                                    echo "<i class='icon-line-height fa-solid fa-utensils mx-1'></i>";
+                                    echo "<p class= 'text-ing'>".$ingredient."</p>";
+                                    echo "</div>";
                                 }
                             }
 
@@ -345,7 +346,7 @@ $recetas_relacionadas = $database->query("SELECT <recipes_id>,
                                             
                                     foreach ($directions as $key => $direction){
                                         if($key != array_key_last($directions)){
-                                            echo "<li>".$direction."</li>";
+                                            echo "<li class= 'm-1'>".$direction."</li>";
                                         }
                                     }
 

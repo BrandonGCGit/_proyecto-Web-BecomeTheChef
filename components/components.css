@@ -103,7 +103,11 @@ body{
     width: 15%;
 }
 
-
+.filters-bg{
+    background-color: var(--clr-yellow);
+    size: 1.5rem;
+    border-radius: 5%;
+}
 
 .align-card-body{
     margin-top: 0rem;

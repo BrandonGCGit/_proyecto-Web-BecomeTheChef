@@ -137,3 +137,10 @@
  .txt-terms{
     color: var(--clr-d-gray);
  }
+
+.txt-filters{
+    color: var(--clr-white);
+    font-weight: var(--fw-med);
+    font-size: var(--fs-rg);
+    font-style: normal;
+}
